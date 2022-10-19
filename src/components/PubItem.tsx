@@ -21,16 +21,16 @@ const PubItem = (
   const thumnailImage = getImage(props?.thumbnail as ImageDataLike);
 
   return (
-    <div className='flex items-center mb-2 flex-col md:flex-row'>
+    <div className='flex items-center my-2 flex-col lg:flex-row border-b border-slate-100'>
       {thumnailImage && (
-        <div className='mr-4 md:w-1/4'>
+        <div className='mr-4 lg:w-1/4'>
           <GatsbyImage
             image={thumnailImage}
             alt={`Thumbnail image of ${props?.title}`}
           />
         </div>
       )}
-      <div className='flex flex-1 flex-col mb-4 text-gray-600'>
+      <div className='flex flex-1 flex-col mb-4 text-gray-600 mt-4'>
         <Link to={`/publications/${props?.slug}`}>
           <div className='font-extrabold hover:text-blue-500'>
             {props?.title}

@@ -31,8 +31,8 @@ const Layout = (props: Props) => {
                 className='mb-4 w-24 md:w-4/5'
               />
               <div>
-                <div className='text-xl font-bold'>Sangwook Lee</div>
-                <div className='my-2'>
+                <div className='text-lg font-bold'>Sangwook Lee</div>
+                <div className='text-sm my-2'>
                   HCI, Online community, HAI, Mobile System
                 </div>
               </div>

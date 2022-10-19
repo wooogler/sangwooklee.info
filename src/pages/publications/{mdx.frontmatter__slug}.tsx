@@ -1,4 +1,4 @@
-import { graphql, PageProps } from 'gatsby';
+import { graphql, HeadFC, HeadProps, PageProps } from 'gatsby';
 import React from 'react';
 import HighlightedText from '../../components/HighlightedText';
 import Layout from '../../components/Layout';
@@ -9,6 +9,7 @@ import {
   AiFillPicture,
 } from 'react-icons/ai';
 import Utterances from '../../components/Utterances';
+import { SEO } from '../../components/Seo';
 
 const PublicationPage = ({
   data,
@@ -22,11 +23,12 @@ const PublicationPage = ({
       {frontmatter?.author && (
         <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
       )}
-      <div className='flex'>
+      <div className='mb-2'>{frontmatter?.conference}</div>
+      <div className='flex mb-6'>
         {frontmatter?.publication_url && (
           <a
             href={frontmatter?.publication_url}
-            className='flex items-center underline mr-2'
+            className='flex items-center underline mr-2 text-gray-600'
             target='_blank'
             rel='noreferrer noopener'
           >
@@ -65,7 +67,7 @@ const PublicationPage = ({
           </a>
         )}
       </div>
-      <div className='mb-2'>{frontmatter?.conference}</div>
+
       <div className='prose'>{children}</div>
       <div className='mt-6'>
         <Utterances repo='wooogler/sangwook-lee' />
@@ -91,9 +93,14 @@ export const query = graphql`
           publicURL
         }
         github_url
+        slug
       }
     }
   }
 `;
 
 export default PublicationPage;
+
+export const Head: HeadFC<Queries.PublicationPageQuery> = ({ data }) => (
+  <SEO title={`Publications - ${data.mdx?.frontmatter?.slug}`} />
+);

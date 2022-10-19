@@ -76,6 +76,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/contents/publications`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'feed',
+        path: `${__dirname}/contents/feed`,
+      },
+    },
   ],
 };
 
