@@ -7,6 +7,7 @@ import {
   SiTwitter,
   SiGooglescholar,
 } from 'react-icons/si';
+import NewsFeed from './NewsFeed';
 
 type Props = { children: ReactNode };
 
@@ -21,7 +22,7 @@ const Layout = (props: Props) => {
 
   return (
     <div className='container mx-auto'>
-      <div className='flex flex-row flex-wrap py-4 w-3/4 mx-auto'>
+      <div className='flex flex-row flex-wrap py-4 w-5/6 mx-auto'>
         <nav className='w-full md:w-1/4 px-2'>
           <div className='sticky top-0 p-4 w-full'>
             <div className='flex flex-col overflow-hidden'>
@@ -49,15 +50,22 @@ const Layout = (props: Props) => {
                   activeClassName='text-blue-500'
                   className='hover:text-blue-300 mr-2'
                 >
-                  Publication
+                  Publications
+                </Link>
+                <Link
+                  to='/news'
+                  activeClassName='text-blue-500'
+                  className='hover:text-blue-300 mr-2'
+                >
+                  News
                 </Link>
                 <a
                   href={data.file.publicURL}
-                  className='hover:text-blue-300 mr-2'
+                  className='text-red-500 mr-2 underline'
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  CV (PDF)
+                  Curriculum Vitae
                 </a>
               </div>
               <div className='mt-4 hidden md:flex'>
@@ -93,6 +101,10 @@ const Layout = (props: Props) => {
                 >
                   <SiGithub />
                 </a>
+              </div>
+              <div className='mt-4'>
+                <div className='font-semibold'>News</div>
+                <NewsFeed />
               </div>
             </div>
           </div>

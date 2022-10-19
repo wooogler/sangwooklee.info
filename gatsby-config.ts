@@ -36,8 +36,7 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
+              maxWidth: 800,
             },
           },
         ],
@@ -79,8 +78,14 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'feed',
-        path: `${__dirname}/contents/feed`,
+        name: 'news',
+        path: `${__dirname}/contents/news`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -100,
       },
     },
   ],
