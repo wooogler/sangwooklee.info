@@ -7,6 +7,7 @@ import {
   SiTwitter,
   SiGooglescholar,
 } from 'react-icons/si';
+import { useViewport } from '../util/hooks';
 import NewsFeed from './NewsFeed';
 
 type Props = { children: ReactNode };
@@ -19,12 +20,13 @@ const Layout = (props: Props) => {
       }
     }
   `);
+  const { width } = useViewport();
 
   return (
     <div className='container mx-auto'>
       <div className='flex flex-row flex-wrap py-4 w-5/6 mx-auto'>
         <nav className='w-full md:w-1/4 px-2'>
-          <div className='sticky top-0 p-4 w-full'>
+          <div className='sticky top-0 p-2 w-full'>
             <div className='flex flex-col overflow-hidden'>
               <StaticImage
                 src='../../contents/info/profile.png'
@@ -65,7 +67,7 @@ const Layout = (props: Props) => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  Curriculum Vitae
+                  {width > 1024 ? 'Curriculum Vitae' : 'CV'}
                 </a>
               </div>
               <div className='mt-4 hidden md:flex'>
@@ -102,7 +104,7 @@ const Layout = (props: Props) => {
                   <SiGithub />
                 </a>
               </div>
-              <div className='mt-4'>
+              <div className='mt-4 md:block hidden'>
                 <div className='font-semibold'>News</div>
                 <NewsFeed />
               </div>
