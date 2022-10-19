@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import React from 'react';
 import HighlightedText from './HighlightedText';
@@ -31,11 +32,11 @@ const PubItem = (
         </div>
       )}
       <div className='flex flex-1 flex-col mb-4 text-gray-600 mt-4'>
-        <Link to={`/publications/${props?.slug}`}>
+        <AnchorLink to={`/publications/${props?.slug}#title`}>
           <div className='font-extrabold hover:text-blue-500'>
             {props?.title}
           </div>
-        </Link>
+        </AnchorLink>
         {props?.author && (
           <HighlightedText text={props.author} query='Sangwook Lee' />
         )}

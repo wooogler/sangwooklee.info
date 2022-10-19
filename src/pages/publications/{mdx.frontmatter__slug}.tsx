@@ -19,7 +19,9 @@ const PublicationPage = ({
 
   return (
     <Layout>
-      <div className='text-2xl font-bold mb-2'>{frontmatter?.title}</div>
+      <div className='text-2xl font-bold mb-2' id='title'>
+        {frontmatter?.title}
+      </div>
       {frontmatter?.author && (
         <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
       )}
