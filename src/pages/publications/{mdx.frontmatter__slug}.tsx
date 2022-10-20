@@ -19,13 +19,15 @@ const PublicationPage = ({
 
   return (
     <Layout>
-      <div className='text-2xl font-bold mb-2' id='title'>
-        {frontmatter?.title}
+      <div className='prose'>
+        <div className='text-2xl font-bold mb-2' id='title'>
+          {frontmatter?.title}
+        </div>
+        {frontmatter?.author && (
+          <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
+        )}
+        <div className='mb-2'>{frontmatter?.conference}</div>
       </div>
-      {frontmatter?.author && (
-        <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
-      )}
-      <div className='mb-2'>{frontmatter?.conference}</div>
       <div className='flex mb-6'>
         {frontmatter?.publication_url && (
           <a
@@ -71,9 +73,6 @@ const PublicationPage = ({
       </div>
 
       <div className='prose'>{children}</div>
-      <div className='mt-6'>
-        <Utterances repo='wooogler/sangwook-lee' />
-      </div>
     </Layout>
   );
 };
