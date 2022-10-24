@@ -8,6 +8,7 @@ import {
   AiFillGithub,
   AiFillPicture,
 } from 'react-icons/ai';
+import { BsGearWideConnected } from 'react-icons/bs';
 import Utterances from '../../components/Utterances';
 import { SEO } from '../../components/Seo';
 
@@ -58,6 +59,16 @@ const PublicationPage = ({
           >
             <AiFillPicture />
             Poster
+          </a>
+        )}
+        {frontmatter?.demo_url && (
+          <a
+            href={frontmatter?.demo_url}
+            download
+            className='flex items-center underline'
+          >
+            <BsGearWideConnected />
+            Demo
           </a>
         )}
         {frontmatter?.github_url && (
