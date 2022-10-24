@@ -61,7 +61,7 @@ const PublicationPage = ({
             Poster
           </a>
         )}
-        {frontmatter?.demo_url && (
+        {frontmatter.demo_url && (
           <a
             href={frontmatter?.demo_url}
             download
@@ -104,6 +104,7 @@ export const query = graphql`
         poster_pdf {
           publicURL
         }
+        demo_url
         github_url
         slug
       }
