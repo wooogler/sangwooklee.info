@@ -29,9 +29,9 @@ const Layout = (props: Props) => {
           <div className='sticky top-0 p-2 w-full'>
             <div className='flex flex-col overflow-hidden'>
               <StaticImage
-                src='../../contents/info/profile.png'
+                src='../../contents/info/profile.jpg'
                 alt="Sangwook's profile image"
-                className='mb-4 w-24 md:w-4/5'
+                className='mb-4 w-24 md:w-3/5'
               />
               <div>
                 <div className='text-lg font-bold'>Sangwook Lee</div>
@@ -104,9 +104,11 @@ const Layout = (props: Props) => {
                   <SiGithub />
                 </a>
               </div>
-              <div className='mt-4 md:block hidden'>
+              <div className='mt-4 md:block'>
+                <hr className='mb-1' />
                 <div className='font-semibold'>News</div>
                 <NewsFeed />
+                <hr className='mt-2' />
               </div>
             </div>
           </div>

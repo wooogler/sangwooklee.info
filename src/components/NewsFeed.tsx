@@ -3,6 +3,7 @@ import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { graphql, useStaticQuery } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React from 'react';
+import { useViewport } from '../util/hooks';
 
 type Props = {};
 
@@ -26,9 +27,12 @@ const NewsFeed = (props: Props) => {
     }
   `);
 
+  const { width } = useViewport();
+  const newsNodes = data.allMarkdownRemark?.nodes;
+
   return (
     <div>
-      {data.allMarkdownRemark?.nodes?.map((node) => {
+      {newsNodes?.slice(0, width > 1024 ? newsNodes?.length : 1).map((node) => {
         return (
           <div className='mt-2'>
             <AnchorLink to={`/news#${node.frontmatter.slug}`}>
