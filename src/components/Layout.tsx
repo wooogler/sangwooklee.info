@@ -1,14 +1,14 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import React, { ReactNode } from 'react';
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import React, { ReactNode } from "react";
 import {
   SiLinkedin,
   SiGithub,
   SiTwitter,
   SiGooglescholar,
-} from 'react-icons/si';
-import { useViewport } from '../util/hooks';
-import NewsFeed from './NewsFeed';
+} from "react-icons/si";
+import { useViewport } from "../util/hooks";
+import NewsFeed from "./NewsFeed";
 
 type Props = { children: ReactNode };
 
@@ -34,7 +34,9 @@ const Layout = (props: Props) => {
                 className='mb-4 w-24 md:w-3/5'
               />
               <div>
-                <div className='text-lg font-bold'>Sangwook Lee</div>
+                <div className='text-lg font-bold'>
+                  <Link to='/'>Sangwook Lee</Link>
+                </div>
                 <div className='text-sm my-2'>
                   HCI, Online community, HAI, Mobile System
                 </div>
@@ -67,7 +69,7 @@ const Layout = (props: Props) => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  {width > 1024 ? 'Curriculum Vitae' : 'CV'}
+                  {width > 1024 ? "Curriculum Vitae" : "CV"}
                 </a>
               </div>
               <div className='mt-4 hidden md:flex'>

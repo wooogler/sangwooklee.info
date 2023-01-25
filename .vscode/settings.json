@@ -1,0 +1,9 @@
+{
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file",
+      "pattern": "contents/news/uist2022/index.md"
+    }
+  ]
+}

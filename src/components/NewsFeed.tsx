@@ -1,9 +1,9 @@
-import dayjs from 'dayjs';
-import localizedFormat from 'dayjs/plugin/localizedFormat';
-import { graphql, useStaticQuery } from 'gatsby';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import React from 'react';
-import { useViewport } from '../util/hooks';
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import { graphql, useStaticQuery } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import React from "react";
+import { useViewport } from "../util/hooks";
 
 type Props = {};
 
@@ -40,8 +40,8 @@ const NewsFeed = (props: Props) => {
                 {node.frontmatter.title}
               </div>
             </AnchorLink>
-            <div className='text-xs mt-1'>
-              {dayjs(node.frontmatter.date).format('ll')}
+            <div className='text-xs mt-1 italic text-gray-400'>
+              {dayjs(node.frontmatter.date).format("ll")}
             </div>
           </div>
         );
