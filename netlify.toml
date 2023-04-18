@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/modsandbox/*"
+  to = "https://d1ghoiaeceymcr.cloudfront.net/:splat"
+  status = 200
