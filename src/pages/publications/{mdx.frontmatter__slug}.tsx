@@ -1,16 +1,16 @@
-import { graphql, HeadFC, HeadProps, PageProps } from 'gatsby';
-import React from 'react';
-import HighlightedText from '../../components/HighlightedText';
-import Layout from '../../components/Layout';
+import { graphql, HeadFC, HeadProps, PageProps } from "gatsby";
+import React from "react";
+import HighlightedText from "../../components/HighlightedText";
+import Layout from "../../components/Layout";
 import {
   AiOutlineLink,
   AiOutlineFilePdf,
   AiFillGithub,
   AiFillPicture,
-} from 'react-icons/ai';
-import { BsGearWideConnected } from 'react-icons/bs';
-import Utterances from '../../components/Utterances';
-import { SEO } from '../../components/Seo';
+} from "react-icons/ai";
+import { BsGearWideConnected } from "react-icons/bs";
+import Utterances from "../../components/Utterances";
+import { SEO } from "../../components/Seo";
 
 const PublicationPage = ({
   data,
