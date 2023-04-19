@@ -65,7 +65,7 @@ const PublicationPage = ({
           <a
             href={frontmatter?.demo_url}
             download
-            className='flex items-center underline'
+            className='flex items-center underline mr-2'
           >
             <BsGearWideConnected />
             Demo
