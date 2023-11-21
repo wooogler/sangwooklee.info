@@ -8,6 +8,4 @@ slug: "uist2022"
 
 I attended UIST 2022 to present my UIST poster [LV-Linker](https://sangwooklee.info/publications/lv-linker)!
 
-I met several enthusiastic researchers in the HCI field and shared my research idea and directions. Especially, I made a lot of social connections with graduate students who have the same interests.
-
-I will share my v-logs with my videos recorded at UIST 2022 with my GoPro. Coming soon!
+I met several enthusiastic researchers in the HCI field and shared my research ideas and directions. Especially, I made a lot of social connections with graduate students who have the same interests.
