@@ -27,6 +27,7 @@ const NewsPage = (props: PageProps<Queries.NewsPageQuery>) => {
               {node.html && (
                 <div dangerouslySetInnerHTML={{ __html: node.html }} />
               )}
+              <hr className='my-4' />
             </div>
           );
         })}

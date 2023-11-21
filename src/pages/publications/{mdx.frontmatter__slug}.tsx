@@ -61,7 +61,7 @@ const PublicationPage = ({
             Poster
           </a>
         )}
-        {frontmatter.demo_url && (
+        {frontmatter?.demo_url && (
           <a
             href={frontmatter?.demo_url}
             download

@@ -14,6 +14,7 @@ While it's not yet complete, I plan to conduct additional user studies back in K
 
 <iframe
   height='315'
+  width='640'
   src='https://www.youtube.com/embed/r-CzknbhwTw'
   title='TOMAS - Prototype video'
   frameborder='0'

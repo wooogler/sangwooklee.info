@@ -38,7 +38,7 @@ const Layout = (props: Props) => {
                   <Link to='/'>Sangwook Lee</Link>
                 </div>
                 <div className='text-sm my-2'>
-                  HCI, Online community, HAI, Mobile System
+                  HCI, Accessibility, Social Computing, and HAI
                 </div>
               </div>
               <div className='flex md:flex-col mt-2'>
@@ -69,7 +69,7 @@ const Layout = (props: Props) => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  {width > 1024 ? "Curriculum Vitae" : "CV"}
+                  {(width as number) > 1024 ? "Curriculum Vitae" : "CV"}
                 </a>
               </div>
               <div className='mt-4 hidden md:flex'>
