@@ -1,5 +1,5 @@
 ---
-title: "Attended UIST 2022!"
+title: "Poster Session at UIST 2022"
 date: "2022-11-02"
 slug: "uist2022"
 ---

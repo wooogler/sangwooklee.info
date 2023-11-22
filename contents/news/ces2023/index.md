@@ -1,5 +1,5 @@
 ---
-title: "Runned a Booth in CES 2023"
+title: "Running a Booth in CES 2023"
 date: "2023-01-08"
 slug: "ces2023"
 ---

@@ -1,7 +1,7 @@
 ---
-title: 'Selected as an ACM SIGCHI Gary Marsden Travel Awardee!'
-date: '2022-10-18'
-slug: 'travel-awards'
+title: "Selected as an ACM SIGCHI Gary Marsden Travel Awardee!"
+date: "2022-10-18"
+slug: "travel-awards"
 ---
 
 ![An Email informing that I has been accepted in Gary Marsden Travel Award](./accepted_awards.png)

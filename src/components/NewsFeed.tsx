@@ -32,7 +32,7 @@ const NewsFeed = (props: Props) => {
 
   return (
     <div>
-      {newsNodes?.slice(0, width > 1024 ? newsNodes?.length : 1).map((node) => {
+      {newsNodes?.map((node) => {
         return (
           <div className='mt-2'>
             <AnchorLink to={`/news#${node.frontmatter.slug}`}>
