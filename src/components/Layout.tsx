@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import { useViewport } from "../util/hooks";
 import NewsFeed from "./NewsFeed";
+import { AiOutlineFilePdf } from "react-icons/ai";
 
 type Props = { children: ReactNode };
 
@@ -20,7 +21,6 @@ const Layout = (props: Props) => {
       }
     }
   `);
-  const { width } = useViewport();
 
   return (
     <div className='container mx-auto'>
@@ -65,11 +65,12 @@ const Layout = (props: Props) => {
                 </Link>
                 <a
                   href={data.file.publicURL}
-                  className='text-red-500 mr-2 underline'
+                  className='text-red-500 mr-2 underline flex items-center'
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  {(width as number) > 1024 ? "Curriculum Vitae" : "CV"}
+                  <span className='mr-1'>CV</span>
+                  <AiOutlineFilePdf />
                 </a>
               </div>
               <div className='mt-4 hidden md:flex'>
