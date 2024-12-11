@@ -1,11 +1,11 @@
 ---
 title: "intro"
-date: "2022-10-14"
+date: "2024-12-11"
 slug: "intro"
 ---
 
 # Hi, I'm Sangwook Lee!
 
-I am a Master's student at [KAIST School of Computing](https://cs.kaist.ac.kr/) and am being advised by [Prof. Insik Shin](http://cps.kaist.ac.kr/~ishin/) as a member of the [CPS Lab](http://cps.kaist.ac.kr/).
+I am a Ph.D. student at [Virginia Tech Computer Science](https://cs.vt.edu) and am being advised by [Prof. Sang Won Lee](https://echolab.cs.vt.edu/sangwonlee/) as a member of the [Echo Lab](https://echolab.cs.vt.edu/).
 
-My interest lies in **human-computer interaction (HCI)**, focusing on **accessibility** and **social computing**. I design systems that **assist non-technical groups in utilizing modern technology** powered by machine learning models. Recently, I have been exploring LLMs for their capacity to generate natural language explanations and human-like reasoning within these systems.
+My interest lies in **human-computer interaction (HCI)**, focusing on **accessibility** and **social computing**. I research how **LLM-powered chatbots** can be leveraged to help diverse groups of people benefit from technology, contribute to society, and improve their well-being. Through my work, I aim to make advanced technology more accessible and meaningful in people's everyday lives.
