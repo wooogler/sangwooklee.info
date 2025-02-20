@@ -1,21 +1,22 @@
 ---
-title: "Presentation and Student Volunteer at CHI2023"
-date: "2023-04-26"
-slug: "chi2023-presentation"
+title: "Photography SV at CHI2024"
+date: "2024-05-16"
+slug: "chi2024-sv"
 ---
 
 <iframe
   height='315'
   width='640'
-  src='https://www.youtube.com/embed/8UKCn_fPdMQ'
-  title='CHI 2023 Presentation - Sangwook Lee'
+  src='https://www.youtube.com/watch?v=nvWRn77DlWA'
+  title='Catching Waves at CHI - CHI 2024 recap in Keynote'
   frameborder='0'
   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
   allowfullscreen
   className='w-full'
 ></iframe>
 
-I visited Hamburg, Germany to attend CHI2023 and presented my paper "ModSandbox: Facilitating Online Community Moderation Through Error Prediction and Improvement of Automated Rules." It had been seven years since I first attended CHI in 2016. Although it was not a popular session, presenting my research in front of audience was a truly meaningful experience! I hope to have more opportunities to present at such conferences in the future.
+I traveled to Honolulu, Hawaii for CHI2024 as a Photography SV, determined to show what the conference truly feels like. Instead of just taking photos, I recorded footage using a smartphone, action camera, FPV drone, and a 360° camera, capturing the full spirit of CHI. To set the right mood, I used [Suno AI](https://suno.ai/) to generate a custom soundtrack themed around Hawaii and CHI2024.
 
-![Student Volunteer at CHI2023](./SV_chi2023.jpg)
-Fortunately, I got an opportunity to participate in the conference as a student volunteer. I was able to meet a lot of graduate students in HCI fields. We shared our interesting research together.
+The video was a hit among fellow Student Volunteers, and I had the honor of showcasing it at the Closing Keynote—a moment I’ll never forget. It’s now featured on the [CHI2024 homepage](https://chi2024.acm.org/), letting anyone get a glimpse of the event’s energy.
+
+Participating as a Student Volunteer gave me the chance to meet incredible people from around the world, exchanging ideas and research in the HCI community. I look forward to finding more ways to share the CHI experience!
