@@ -7,7 +7,7 @@ slug: "chi2024-sv"
 <iframe
   height='315'
   width='640'
-  src='https://www.youtube.com/watch?v=nvWRn77DlWA'
+  src='https://www.youtube.com/embed/nvWRn77DlWA'
   title='Catching Waves at CHI - CHI 2024 recap in Keynote'
   frameborder='0'
   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
