@@ -40,7 +40,7 @@ export const query = graphql`
   query NewsPage {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/news/" } }
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       nodes {
         html

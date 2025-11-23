@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 import {
   SiLinkedin,
   SiGithub,
-  SiTwitter,
+  SiX,
   SiGooglescholar,
 } from "react-icons/si";
 import { useViewport } from "../util/hooks";
@@ -80,7 +80,7 @@ const Layout = (props: Props) => {
                   rel='noreferrer noopener'
                   className='hover:text-sky-300 text-gray-500 mr-2'
                 >
-                  <SiTwitter />
+                  <SiX />
                 </a>
                 <a
                   href='https://www.linkedin.com/in/sangwook-lee/'

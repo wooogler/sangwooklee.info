@@ -45,7 +45,7 @@ export const query = graphql`
   query PublicationsIndexPage {
     allMdx(
       filter: { internal: { contentFilePath: { regex: "/publications/" } } }
-      sort: { fields: frontmatter___publication_date, order: DESC }
+      sort: { frontmatter: { publication_date: DESC } }
     ) {
       nodes {
         id

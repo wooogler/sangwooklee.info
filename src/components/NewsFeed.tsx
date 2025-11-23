@@ -14,7 +14,7 @@ const NewsFeed = (props: Props) => {
     query {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/news/" } }
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
         nodes {
           frontmatter {
