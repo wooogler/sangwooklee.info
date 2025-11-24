@@ -1,6 +1,6 @@
 ---
 title: "intro"
-date: "2024-12-11"
+date: "2025-11-24"
 slug: "intro"
 ---
 
@@ -8,4 +8,4 @@ slug: "intro"
 
 I am a Ph.D. student at [Virginia Tech Computer Science](https://cs.vt.edu), advised by [Prof. Sang Won Lee](https://echolab.cs.vt.edu/sangwonlee/) in the [echolab](https://echolab.cs.vt.edu/). My research explores **human-computer interaction (HCI)**, focusing on **accessibility** and **social computing**.
 
-I investigate how **generative AI**, particularly **LLM-powered chatbots**, can bridge the **information gap** by adapting to diverse cognitive needs. Through this work, I aim to **make advanced technology more inclusive, impactful, and meaningful** in everyday life for people from all walks of life.
+I study how **LLM-based agentic systems** can bridge **knowledge gaps** in **collaborative environments** by facilitating **context-aware communication** and **organizational learning**. My goal is to design intelligent systems that **empower people to create, share, and utilize knowledge** more effectively across organizational contexts.

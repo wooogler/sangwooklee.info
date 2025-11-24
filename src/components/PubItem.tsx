@@ -24,10 +24,12 @@ const PubItem = (
   return (
     <div className='flex items-center my-2 flex-col lg:flex-row border-b border-slate-100'>
       {thumnailImage && (
-        <div className='mr-4 lg:w-1/4'>
+        <div className='mr-4 lg:w-1/4 h-48 overflow-hidden flex-shrink-0'>
           <GatsbyImage
             image={thumnailImage}
             alt={`Thumbnail image of ${props?.title}`}
+            className='h-full'
+            imgStyle={{ objectFit: 'cover' }}
           />
         </div>
       )}
