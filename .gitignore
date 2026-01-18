@@ -4,3 +4,13 @@ public
 src/gatsby-types.d.ts
 pnpm-lock.yaml
 .DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+contents/info/cv/resume.pdf
