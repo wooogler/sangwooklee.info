@@ -20,7 +20,7 @@ const PublicationPage = ({
 
   return (
     <Layout>
-      <div className='prose'>
+      <div className='prose max-w-none'>
         <div className='text-2xl font-bold mb-2' id='title'>
           {frontmatter?.title}
         </div>
@@ -83,7 +83,7 @@ const PublicationPage = ({
         )}
       </div>
 
-      <div className='prose'>{children}</div>
+      <div className='prose max-w-none'>{children}</div>
     </Layout>
   );
 };

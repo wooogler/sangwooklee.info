@@ -15,6 +15,7 @@ const NewsFeed = (props: Props) => {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/news/" } }
         sort: { frontmatter: { date: DESC } }
+        limit: 3
       ) {
         nodes {
           frontmatter {
@@ -27,7 +28,6 @@ const NewsFeed = (props: Props) => {
     }
   `);
 
-  const { width } = useViewport();
   const newsNodes = data.allMarkdownRemark?.nodes;
 
   return (

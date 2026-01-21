@@ -109,7 +109,15 @@ const Layout = (props: Props) => {
               </div>
               <div className='mt-4 md:block'>
                 <hr className='mb-1' />
-                <div className='font-semibold'>News</div>
+                <div className='flex justify-between items-center'>
+                  <div className='font-semibold'>News</div>
+                  <Link
+                    to='/news'
+                    className='text-xs text-blue-500 hover:text-blue-700 underline'
+                  >
+                    More
+                  </Link>
+                </div>
                 <NewsFeed />
                 <hr className='mt-2' />
               </div>
