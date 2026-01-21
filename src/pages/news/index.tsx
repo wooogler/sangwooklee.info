@@ -56,4 +56,14 @@ export const query = graphql`
 
 export default NewsPage;
 
-export const Head: HeadFC = () => <SEO title='News' />;
+export const Head: HeadFC<Queries.NewsPageQuery> = ({ data }) => {
+  // 가장 최근 뉴스의 HTML에서 첫 번째 이미지 추출
+  const firstNews = data.allMarkdownRemark.nodes[0];
+  const html = firstNews?.html || '';
+
+  // img 태그에서 src 추출
+  const imgMatch = html.match(/<img[^>]+src="([^">]+)"/);
+  const firstImage = imgMatch ? imgMatch[1] : undefined;
+
+  return <SEO title='News' image={firstImage} />;
+};

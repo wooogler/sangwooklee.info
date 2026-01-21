@@ -5,14 +5,15 @@ type Props = {
   title?: string;
   description?: string;
   pathname?: string;
+  image?: string;
   children?: ReactNode;
 };
 
-export const SEO = ({ title, description, pathname, children }: Props) => {
+export const SEO = ({ title, description, pathname, image, children }: Props) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
-    image,
+    image: defaultImage,
     siteUrl,
     twitterUsername,
   } = useSiteMetadata();
@@ -20,7 +21,7 @@ export const SEO = ({ title, description, pathname, children }: Props) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image}`,
+    image: image ? `${siteUrl}${image}` : `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
   };
@@ -30,6 +31,15 @@ export const SEO = ({ title, description, pathname, children }: Props) => {
       <title>Sangwook Lee - {seo.title}</title>
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
+
+      {/* Open Graph */}
+      <meta property='og:title' content={seo.title} />
+      <meta property='og:description' content={seo.description} />
+      <meta property='og:image' content={seo.image} />
+      <meta property='og:url' content={seo.url} />
+      <meta property='og:type' content='website' />
+
+      {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:title' content={seo.title} />
       <meta name='twitter:url' content={seo.url} />

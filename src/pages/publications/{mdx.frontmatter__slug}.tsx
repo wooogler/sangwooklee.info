@@ -107,6 +107,9 @@ export const query = graphql`
         demo_url
         github_url
         slug
+        thumbnail {
+          publicURL
+        }
       }
     }
   }
@@ -114,6 +117,14 @@ export const query = graphql`
 
 export default PublicationPage;
 
-export const Head: HeadFC<Queries.PublicationPageQuery> = ({ data }) => (
-  <SEO title={`Publications - ${data.mdx?.frontmatter?.slug}`} />
-);
+export const Head: HeadFC<Queries.PublicationPageQuery> = ({ data }) => {
+  const frontmatter = data.mdx?.frontmatter;
+  const thumbnail = (frontmatter as any)?.thumbnail?.publicURL;
+  return (
+    <SEO
+      title={`Publications - ${frontmatter?.slug}`}
+      description={frontmatter?.title || undefined}
+      image={thumbnail || undefined}
+    />
+  );
+};
