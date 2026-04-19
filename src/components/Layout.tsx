@@ -38,7 +38,7 @@ const Layout = (props: Props) => {
                   <Link to='/'>Sangwook Lee</Link>
                 </div>
                 <div className='text-sm my-2'>
-                  HCI, Accessibility, Social Computing, and HAI
+                  Ph.D. Candidate @ echolab, Virginia Tech
                 </div>
               </div>
               <div className='flex md:flex-col mt-2'>

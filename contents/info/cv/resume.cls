@@ -11,6 +11,11 @@
 \setlength{\parindent}{0em}
 \setlist{nosep,left=0em,labelindent=5pt,labelwidth=1.25em}
 
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=1000
+\emergencystretch=3em
+
 \newcommand{\@name}[1]{Your Name}
 \newcommand{\name}[1]{\renewcommand{\@name}{#1}}
 \def \makename {\huge\textbf\@name}
@@ -51,8 +56,9 @@
 \define@key{publication}{title}{\def\publication@title{#1}}
 \define@key{publication}{author}{\def\publication@author{#1}}
 \define@key{publication}{publisher}{\def\publication@publisher{#1}}
+\define@key{publication}{award}{\def\publication@award{#1}}
 \newenvironment{PublicationEntry}[1]{
-    \setkeys{publication}{title=,author=,publisher=}
+    \setkeys{publication}{title=,author=,publisher=,award=}
     \setkeys{publication}{#1}
     \smallskip
     \par\textbf{\publication@title}
@@ -61,6 +67,9 @@
     \fi
     \ifx\publication@publisher\empty {}
     \else {\par{\em\publication@publisher}}
+    \fi
+    \ifx\publication@award\empty {}
+    \else {\par\textbf{\faAward\ \publication@award}}
     \fi
 }{
     \bigskip

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import React from 'react';
 import HighlightedText from './HighlightedText';
+import honorableMention from '../images/honorable-mention.png';
 
 type Props = {
   slug?: string;
@@ -23,12 +24,12 @@ const PubItem = (
   return (
     <div className='flex items-center my-2 flex-col lg:flex-row border-b border-slate-100'>
       {thumnailImage && (
-        <div className='mr-4 lg:w-1/4 h-48 overflow-hidden flex-shrink-0'>
+        <div className='mr-4 lg:w-1/4 h-48 overflow-hidden flex-shrink-0 bg-slate-50'>
           <GatsbyImage
             image={thumnailImage}
             alt={`Thumbnail image of ${props?.title}`}
-            className='h-full'
-            imgStyle={{ objectFit: 'cover' }}
+            className='h-full w-full'
+            imgStyle={{ objectFit: 'contain' }}
           />
         </div>
       )}
@@ -42,6 +43,13 @@ const PubItem = (
           <HighlightedText text={props.author} query='Sangwook Lee' />
         )}
         <div className='italic text-sm mt-1'>{props?.conference}</div>
+        {props?.award === 'Honorable Mention' && (
+          <img
+            src={honorableMention}
+            alt='Honorable Mention'
+            className='h-4 w-auto mt-1 self-start'
+          />
+        )}
       </div>
     </div>
   );

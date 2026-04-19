@@ -9,6 +9,7 @@ import {
   AiFillPicture,
 } from "react-icons/ai";
 import { BsGearWideConnected } from "react-icons/bs";
+import honorableMention from "../../images/honorable-mention.png";
 import Utterances from "../../components/Utterances";
 import { SEO } from "../../components/Seo";
 
@@ -28,6 +29,13 @@ const PublicationPage = ({
           <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
         )}
         <div className='mb-2'>{frontmatter?.conference}</div>
+        {frontmatter?.award === 'Honorable Mention' && (
+          <img
+            src={honorableMention}
+            alt='Honorable Mention'
+            className='h-5 w-auto mb-2'
+          />
+        )}
       </div>
       <div className='flex mb-6'>
         {frontmatter?.publication_url && (
@@ -95,6 +103,7 @@ export const query = graphql`
       frontmatter {
         author
         conference
+        award
         publication_date
         publication_url
         title

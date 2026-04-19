@@ -1,11 +1,14 @@
 ---
 title: "intro"
-date: "2026-01-18"
+date: "2026-04-19"
 slug: "intro"
 ---
 
-# Hi, I'm Sangwook Lee!
+# Bridging people with AI agents.
 
-I am a Ph.D. student at [Virginia Tech Computer Science](https://cs.vt.edu), advised by [Prof. Sang Won Lee](https://echolab.cs.vt.edu/sangwonlee/) in the [echolab](https://echolab.cs.vt.edu/). My research explores **human-computer interaction (HCI)**, focusing on **accessibility** and **social computing**.
+I'm **Sangwook Lee**, a second-year Ph.D. candidate at [Virginia Tech Computer Science](https://cs.vt.edu), advised by [Prof. Sang Won Lee](https://echolab.cs.vt.edu/sangwonlee/) in the [echolab](https://echolab.cs.vt.edu/). My research sits at the intersection of **Human-AI Interaction (HAI)**, **social computing**, and **accessibility**.
 
-I study how **LLM-based agentic systems** can bridge knowledge gaps in collaborative environments by facilitating **context-aware communication and organizational learning**. My goal is to design intelligent systems that empower people to create, share, and utilize knowledge more effectively across organizational contexts.
+I design and study **AI-based agents that bridge gaps between people**. My Ph.D. research unfolds across two threads:
+
+- **Bridging the knowledge gap**: In collaborative organizations (e.g., university research labs), a *knowledge agent* draws on everyday communication to build and maintain organizational memory, reducing information asymmetry among members.
+- **Bridging the digital divide**: In complex digital systems (e.g., movie ticket booking), a *UI agent* adapts the interface and navigation to user preferences, reducing accessibility gaps across user populations.
