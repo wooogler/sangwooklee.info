@@ -34,6 +34,13 @@ const PubItem = (
         </div>
       )}
       <div className='flex flex-1 flex-col mb-4 text-gray-600 mt-4'>
+        {props?.award === 'Honorable Mention' && (
+          <img
+            src={honorableMention}
+            alt='Honorable Mention'
+            className='h-4 w-auto mb-1 self-start'
+          />
+        )}
         <Link to={`/publications/${props?.slug}`}>
           <div className='font-extrabold hover:text-blue-500'>
             {props?.title}
@@ -43,13 +50,6 @@ const PubItem = (
           <HighlightedText text={props.author} query='Sangwook Lee' />
         )}
         <div className='italic text-sm mt-1'>{props?.conference}</div>
-        {props?.award === 'Honorable Mention' && (
-          <img
-            src={honorableMention}
-            alt='Honorable Mention'
-            className='h-4 w-auto mt-1 self-start'
-          />
-        )}
       </div>
     </div>
   );
