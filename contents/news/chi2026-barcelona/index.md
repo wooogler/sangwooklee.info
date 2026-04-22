@@ -23,14 +23,11 @@ I'm also thrilled to share that CHOIR received a **Best Paper Honorable Mention*
 
 A huge thanks to my co-authors Adnan Abbas, Yan Chen, Young-Ho Kim, and my advisor Sang Won Lee. I'm also grateful to everyone in echolab and to the CHI community for the thoughtful feedback and conversations in Barcelona.
 
-<div style="display: flex; justify-content: center; margin-top: 1.5rem;">
 <iframe
-  width='480'
-  height='270'
   src='https://www.youtube.com/embed/Eh2wlZkm-0Q'
   title='CHOIR presentation at CHI 2026'
-  frameborder='0'
-  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  referrerpolicy='strict-origin-when-cross-origin'
+  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
   allowfullscreen
+  style='aspect-ratio: 16/9; width: 100%; max-width: 480px; display: block; margin: 1.5rem auto 0; border: 0;'
 ></iframe>
-</div>
