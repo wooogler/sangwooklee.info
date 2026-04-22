@@ -8,7 +8,7 @@ const HomePage = ({ data }: PageProps<Queries.HomePageQuery>) => {
   return (
     <Layout>
       {data?.intro?.html && (
-        <div className='prose prose-h1:text-2xl max-w-none'>
+        <div className='prose prose-h1:text-2xl max-w-none [--tw-prose-bullets:theme(colors.slate.600)]'>
           <div dangerouslySetInnerHTML={{ __html: data.intro.html }} />
           <div className='text-xs text-slate-600 mb-4'>
             Last Update: {data.intro.frontmatter?.date}
