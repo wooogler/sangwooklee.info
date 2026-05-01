@@ -1,13 +1,13 @@
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { graphql, useStaticQuery } from "gatsby";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React from "react";
-import { useViewport } from "../util/hooks";
 
 type Props = {};
 
 dayjs.extend(localizedFormat);
+
+const normalizePath = (path: string) => path.replace(/\/+$/, "") || "/";
 
 const NewsFeed = (props: Props) => {
   const data = useStaticQuery<News>(graphql`
@@ -30,16 +30,33 @@ const NewsFeed = (props: Props) => {
 
   const newsNodes = data.allMarkdownRemark?.nodes;
 
+  const jumpToNews = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    slug?: string | null
+  ) => {
+    if (!slug || typeof window === "undefined") return;
+    if (normalizePath(window.location.pathname) !== "/news") return;
+
+    const target = document.getElementById(slug);
+    if (!target) return;
+
+    event.preventDefault();
+    window.history.pushState(null, "", `/news/#${slug}`);
+    target.scrollIntoView({ behavior: "auto", block: "start" });
+  };
+
   return (
     <div>
       {newsNodes?.map((node) => {
+        const slug = node.frontmatter.slug;
+
         return (
           <div className='mt-2'>
-            <AnchorLink to={`/news#${node.frontmatter.slug}`}>
+            <a href={`/news/#${slug}`} onClick={(event) => jumpToNews(event, slug)}>
               <div className='text-sm hover:text-blue-600'>
                 {node.frontmatter.title}
               </div>
-            </AnchorLink>
+            </a>
             <div className='text-xs mt-1 italic text-gray-400'>
               {dayjs(node.frontmatter.date).format("ll")}
             </div>

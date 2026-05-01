@@ -99,13 +99,6 @@ const config: GatsbyConfig = {
         path: `${__dirname}/contents/news`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-anchor-links',
-      options: {
-        duration: 0,
-        offset: -20,
-      },
-    },
   ],
 };
 
