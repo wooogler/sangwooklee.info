@@ -72,11 +72,17 @@ const PublicationPage = ({
         {frontmatter?.demo_url && (
           <a
             href={frontmatter?.demo_url}
-            download
             className='flex items-center underline mr-2'
+            target='_blank'
+            rel='noreferrer noopener'
           >
             <BsGearWideConnected />
             Demo
+            {frontmatter?.demo_label && (
+              <span className='ml-1 px-1.5 py-0.5 text-xs rounded bg-amber-100 text-amber-800 no-underline'>
+                {frontmatter.demo_label}
+              </span>
+            )}
           </a>
         )}
         {frontmatter?.github_url && (
@@ -114,6 +120,7 @@ export const query = graphql`
           publicURL
         }
         demo_url
+        demo_label
         github_url
         slug
         thumbnail {

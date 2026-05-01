@@ -4,6 +4,7 @@ public
 src/gatsby-types.d.ts
 pnpm-lock.yaml
 .DS_Store
+**/.DS_Store
 
 # LaTeX build artifacts
 *.aux
