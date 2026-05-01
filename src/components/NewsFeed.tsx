@@ -42,7 +42,9 @@ const NewsFeed = (props: Props) => {
 
     event.preventDefault();
     window.history.pushState(null, "", `/news/#${slug}`);
-    target.scrollIntoView({ behavior: "auto", block: "start" });
+    const offset = 120;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: "auto" });
   };
 
   return (
