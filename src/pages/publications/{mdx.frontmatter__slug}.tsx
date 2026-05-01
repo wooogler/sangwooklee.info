@@ -28,7 +28,14 @@ const PublicationPage = ({
         {frontmatter?.author && (
           <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
         )}
-        <div className='mb-2'>{frontmatter?.conference}</div>
+        <div className='mb-2 flex items-center gap-2'>
+          {frontmatter?.conference}
+          {(frontmatter as any)?.under_review && (
+            <span className='px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-700'>
+              Under Review
+            </span>
+          )}
+        </div>
         {frontmatter?.award === 'Honorable Mention' && (
           <img
             src={honorableMention}
@@ -110,6 +117,7 @@ export const query = graphql`
         author
         conference
         award
+        under_review
         publication_date
         publication_url
         title

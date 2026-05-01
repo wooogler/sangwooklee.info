@@ -5,20 +5,20 @@ import HighlightedText from './HighlightedText';
 import honorableMention from '../images/honorable-mention.png';
 
 type Props = {
-  slug?: string;
+  slug?: string | null;
   title?: string | null;
   author?: string | null;
   conference?: string | null;
+  award?: string | null;
+  under_review?: boolean | null;
   thumbnail?: {
     childImageSharp?: {
       gatsbyImageData: any;
-    };
-  };
+    } | null;
+  } | null;
 };
 
-const PubItem = (
-  props: Queries.HomePageQuery['pubs']['nodes'][0]['frontmatter']
-) => {
+const PubItem = (props: Props) => {
   const thumnailImage = getImage(props?.thumbnail as ImageDataLike);
 
   return (
@@ -49,7 +49,14 @@ const PubItem = (
         {props?.author && (
           <HighlightedText text={props.author} query='Sangwook Lee' />
         )}
-        <div className='italic text-sm mt-1'>{props?.conference}</div>
+        <div className='italic text-sm mt-1'>
+          {props?.conference}
+          {props?.under_review && (
+            <span className='ml-2 px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-700 not-italic'>
+              Under Review
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
