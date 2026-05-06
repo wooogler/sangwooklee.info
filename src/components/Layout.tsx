@@ -114,12 +114,18 @@ const Layout = (props: Props) => {
                 >
                   <SiGithub />
                 </a>
-                <a
-                  href='mailto:sangwooklee@vt.edu'
-                  className='hover:text-red-500 text-gray-500'
+                <button
+                  onClick={copyEmail}
+                  className='relative hover:text-red-500 text-gray-500 cursor-pointer'
+                  title='Copy email'
                 >
                   <AiOutlineMail />
-                </a>
+                  {copied && (
+                    <span className='absolute -top-6 left-1/2 -translate-x-1/2 text-xs bg-gray-800 text-white rounded px-1.5 py-0.5 whitespace-nowrap'>
+                      Copied!
+                    </span>
+                  )}
+                </button>
               </div>
               <div className='mt-4 md:block'>
                 <hr className='mb-1' />
