@@ -13,12 +13,10 @@ I engaged in enthusiastic discussions and collaborated with two Chinese undergra
 While it's not yet complete, I plan to conduct additional user studies back in Korea and write a paper on it.
 
 <iframe
-  height='315'
-  width='640'
   src='https://www.youtube.com/embed/r-CzknbhwTw'
   title='TOMAS - Prototype video'
-  frameborder='0'
-  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  referrerpolicy='strict-origin-when-cross-origin'
+  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
   allowfullscreen
-  className='w-full'
+  style='aspect-ratio: 16/9; width: 100%; border: 0;'
 ></iframe>

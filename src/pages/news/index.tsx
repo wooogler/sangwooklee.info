@@ -18,7 +18,7 @@ const NewsPage = (props: PageProps<Queries.NewsPageQuery>) => {
           return (
             <div className='prose max-w-none'>
               <div
-                className='text-2xl font-bold mb-2'
+                className='text-2xl font-bold mb-2 scroll-mt-28'
                 id={node.frontmatter?.slug ?? "id"}
               >
                 {node.frontmatter?.title}

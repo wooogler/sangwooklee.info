@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, HeadFC, PageProps } from 'gatsby';
+import { graphql, HeadFC, Link, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import { SEO } from '../components/Seo';
 import PubItem from '../components/PubItem';
@@ -8,7 +8,7 @@ const HomePage = ({ data }: PageProps<Queries.HomePageQuery>) => {
   return (
     <Layout>
       {data?.intro?.html && (
-        <div className='prose prose-h1:text-2xl max-w-none'>
+        <div className='prose prose-h1:text-2xl max-w-none [--tw-prose-bullets:theme(colors.slate.600)]'>
           <div dangerouslySetInnerHTML={{ __html: data.intro.html }} />
           <div className='text-xs text-slate-600 mb-4'>
             Last Update: {data.intro.frontmatter?.date}
@@ -17,7 +17,12 @@ const HomePage = ({ data }: PageProps<Queries.HomePageQuery>) => {
       )}
 
       <hr className='mb-4' />
-      <div className='text-2xl mb-2'>Publications</div>
+      <div className='flex items-baseline justify-between mb-2'>
+        <div className='text-2xl'>Highlighted Papers</div>
+        <Link to='/publications/' className='text-sm text-slate-600 hover:text-slate-900 underline'>
+          View All Publications →
+        </Link>
+      </div>
       <div>
         {data?.pubs.nodes.map((node) => (
           <PubItem
@@ -44,7 +49,10 @@ export const query = graphql`
       }
     }
     pubs: allMdx(
-      filter: { internal: { contentFilePath: { regex: "/publications/" } } }
+      filter: {
+        internal: { contentFilePath: { regex: "/publications/" } }
+        frontmatter: { highlighted: { eq: true } }
+      }
       sort: { frontmatter: { publication_date: DESC } }
     ) {
       nodes {
@@ -54,6 +62,7 @@ export const query = graphql`
           author
           conference
           award
+          under_review
           slug
           thumbnail {
             childImageSharp {

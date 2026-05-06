@@ -5,14 +5,12 @@ slug: "DGP-Guest-Talk"
 ---
 
 <iframe
-  height='315'
-  width='640'
   src='https://www.youtube.com/embed/65baijgNwHs'
   title='Guest Talk "Leveraging NLP Models in Practice" at DGP, University of Toronto'
-  frameborder='0'
-  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  referrerpolicy='strict-origin-when-cross-origin'
+  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
   allowfullscreen
-  className='w-full'
+  style='aspect-ratio: 16/9; width: 100%; border: 0;'
 ></iframe>
 
 During my summer visit to the University of Notre Dame, I visited the University of Toronto. I was lucky to be invited by PhD student SuHyeon Yoo to give a guest talk in her group, Dynamic Graphics Projects (DGP).

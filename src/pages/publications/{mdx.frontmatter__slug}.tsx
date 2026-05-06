@@ -28,7 +28,14 @@ const PublicationPage = ({
         {frontmatter?.author && (
           <HighlightedText text={frontmatter?.author} query='Sangwook Lee' />
         )}
-        <div className='mb-2'>{frontmatter?.conference}</div>
+        <div className='mb-2 flex items-center gap-2'>
+          {frontmatter?.conference}
+          {(frontmatter as any)?.under_review && (
+            <span className='px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-700'>
+              Under Review
+            </span>
+          )}
+        </div>
         {frontmatter?.award === 'Honorable Mention' && (
           <img
             src={honorableMention}
@@ -72,11 +79,17 @@ const PublicationPage = ({
         {frontmatter?.demo_url && (
           <a
             href={frontmatter?.demo_url}
-            download
             className='flex items-center underline mr-2'
+            target='_blank'
+            rel='noreferrer noopener'
           >
             <BsGearWideConnected />
             Demo
+            {frontmatter?.demo_label && (
+              <span className='ml-1 px-1.5 py-0.5 text-xs rounded bg-amber-100 text-amber-800 no-underline'>
+                {frontmatter.demo_label}
+              </span>
+            )}
           </a>
         )}
         {frontmatter?.github_url && (
@@ -104,6 +117,7 @@ export const query = graphql`
         author
         conference
         award
+        under_review
         publication_date
         publication_url
         title
@@ -114,6 +128,7 @@ export const query = graphql`
           publicURL
         }
         demo_url
+        demo_label
         github_url
         slug
         thumbnail {

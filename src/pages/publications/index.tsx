@@ -7,38 +7,41 @@ import { SEO } from '../../components/Seo';
 const PublicationsIndexPage = ({
   data,
 }: PageProps<Queries.PublicationsIndexPageQuery>) => {
+  const papers = data.allMdx.nodes.filter(
+    (node) => node.frontmatter?.format === 'paper'
+  );
+  const posters = data.allMdx.nodes.filter(
+    (node) => node.frontmatter?.format === 'poster'
+  );
+
   return (
     <Layout>
-      <div className='text-2xl mt-4'>Papers</div>
+      <div className='text-2xl mt-4'>Refereed Journals and Conference Proceedings</div>
       <hr className='mb-4' />
-      {data.allMdx.nodes
-        .filter((node) => node.frontmatter?.format === 'paper')
-        .map((node) => (
-          <PubItem
-            key={node.id}
-            title={node.frontmatter?.title ?? null}
-            author={node.frontmatter?.author ?? null}
-            conference={node.frontmatter?.conference ?? null}
-            award={node.frontmatter?.award ?? null}
-            slug={node.frontmatter?.slug ?? null}
-            thumbnail={node.frontmatter?.thumbnail ?? null}
-          />
-        ))}
-      <div className='text-2xl'>Posters</div>
+      {papers.map((node) => (
+        <PubItem
+          key={node.id}
+          title={node.frontmatter?.title ?? null}
+          author={node.frontmatter?.author ?? null}
+          conference={node.frontmatter?.conference ?? null}
+          award={node.frontmatter?.award ?? null}
+          slug={node.frontmatter?.slug ?? null}
+          thumbnail={node.frontmatter?.thumbnail ?? null}
+        />
+      ))}
+      <div className='text-2xl mt-4'>Lightly Reviewed Papers — Posters, Notes, and Workshop Papers</div>
       <hr className='mb-4' />
-      {data.allMdx.nodes
-        .filter((node) => node.frontmatter?.format === 'poster')
-        .map((node) => (
-          <PubItem
-            key={node.id}
-            title={node.frontmatter?.title ?? null}
-            author={node.frontmatter?.author ?? null}
-            conference={node.frontmatter?.conference ?? null}
-            award={node.frontmatter?.award ?? null}
-            slug={node.frontmatter?.slug ?? null}
-            thumbnail={node.frontmatter?.thumbnail ?? null}
-          />
-        ))}
+      {posters.map((node) => (
+        <PubItem
+          key={node.id}
+          title={node.frontmatter?.title ?? null}
+          author={node.frontmatter?.author ?? null}
+          conference={node.frontmatter?.conference ?? null}
+          award={node.frontmatter?.award ?? null}
+          slug={node.frontmatter?.slug ?? null}
+          thumbnail={node.frontmatter?.thumbnail ?? null}
+        />
+      ))}
     </Layout>
   );
 };
@@ -56,6 +59,7 @@ export const query = graphql`
           author
           conference
           award
+          under_review
           slug
           format
           thumbnail {
