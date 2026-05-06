@@ -1,6 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import {
   SiLinkedin,
   SiGithub,
@@ -14,6 +14,14 @@ import { AiOutlineFilePdf, AiOutlineMail } from "react-icons/ai";
 type Props = { children: ReactNode };
 
 const Layout = (props: Props) => {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('sangwooklee@vt.edu');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const data = useStaticQuery(graphql`
     query {
       file(name: { eq: "CV_Sangwook_Lee" }) {
