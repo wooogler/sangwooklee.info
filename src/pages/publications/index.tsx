@@ -10,6 +10,9 @@ const PublicationsIndexPage = ({
   const papers = data.allMdx.nodes.filter(
     (node) => node.frontmatter?.format === 'paper'
   );
+  const theses = data.allMdx.nodes.filter(
+    (node) => node.frontmatter?.format === 'thesis'
+  );
   const posters = data.allMdx.nodes.filter(
     (node) => node.frontmatter?.format === 'poster'
   );
@@ -19,6 +22,19 @@ const PublicationsIndexPage = ({
       <div className='text-2xl mt-4'>Refereed Journals and Conference Proceedings</div>
       <hr className='mb-4' />
       {papers.map((node) => (
+        <PubItem
+          key={node.id}
+          title={node.frontmatter?.title ?? null}
+          author={node.frontmatter?.author ?? null}
+          conference={node.frontmatter?.conference ?? null}
+          award={node.frontmatter?.award ?? null}
+          slug={node.frontmatter?.slug ?? null}
+          thumbnail={node.frontmatter?.thumbnail ?? null}
+        />
+      ))}
+      <div className='text-2xl mt-4'>Thesis</div>
+      <hr className='mb-4' />
+      {theses.map((node) => (
         <PubItem
           key={node.id}
           title={node.frontmatter?.title ?? null}
