@@ -9,7 +9,7 @@ import {
 } from "react-icons/si";
 import { useViewport } from "../util/hooks";
 import NewsFeed from "./NewsFeed";
-import { AiOutlineFilePdf } from "react-icons/ai";
+import { AiOutlineFilePdf, AiOutlineMail } from "react-icons/ai";
 
 type Props = { children: ReactNode };
 
@@ -102,9 +102,15 @@ const Layout = (props: Props) => {
                   href='https://github.com/wooogler'
                   target='_blank'
                   rel='noreferrer noopener'
-                  className='hover:text-purple-600 text-gray-500'
+                  className='hover:text-purple-600 mr-2 text-gray-500'
                 >
                   <SiGithub />
+                </a>
+                <a
+                  href='mailto:sangwooklee@vt.edu'
+                  className='hover:text-red-500 text-gray-500'
+                >
+                  <AiOutlineMail />
                 </a>
               </div>
               <div className='mt-4 md:block'>
