@@ -31,6 +31,8 @@ const HomePage = ({ data }: PageProps<Queries.HomePageQuery>) => {
             author={node.frontmatter?.author ?? null}
             conference={node.frontmatter?.conference ?? null}
             award={node.frontmatter?.award ?? null}
+            under_review={node.frontmatter?.under_review ?? null}
+            review_status={node.frontmatter?.review_status ?? null}
             slug={node.frontmatter?.slug ?? null}
             thumbnail={node.frontmatter?.thumbnail ?? null}
           />
@@ -63,6 +65,7 @@ export const query = graphql`
           conference
           award
           under_review
+          review_status
           slug
           thumbnail {
             childImageSharp {

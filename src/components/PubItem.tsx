@@ -11,6 +11,7 @@ type Props = {
   conference?: string | null;
   award?: string | null;
   under_review?: boolean | null;
+  review_status?: string | null;
   thumbnail?: {
     childImageSharp?: {
       gatsbyImageData: any;
@@ -53,7 +54,7 @@ const PubItem = (props: Props) => {
           {props?.conference}
           {props?.under_review && (
             <span className='ml-2 px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-700 not-italic'>
-              Under Review
+              {props?.review_status || 'Under Review'}
             </span>
           )}
         </div>

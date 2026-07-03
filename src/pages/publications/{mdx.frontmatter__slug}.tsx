@@ -32,7 +32,7 @@ const PublicationPage = ({
           {frontmatter?.conference}
           {(frontmatter as any)?.under_review && (
             <span className='px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-700'>
-              Under Review
+              {(frontmatter as any)?.review_status || 'Under Review'}
             </span>
           )}
         </div>
@@ -118,6 +118,7 @@ export const query = graphql`
         conference
         award
         under_review
+        review_status
         publication_date
         publication_url
         title
