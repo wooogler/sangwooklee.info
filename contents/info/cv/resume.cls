@@ -3,8 +3,9 @@
 
 \LoadClass[12pt,letter]{article}
 
-\usepackage{fontawesome5}
-\usepackage{times}
+\usepackage{pifont}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
 \usepackage{enumitem}
 \usepackage[top=2.54cm,bottom=2.54cm,right=2.54cm,left=2.54cm]{geometry}
 
@@ -69,7 +70,7 @@
     \else {\par{\em\publication@publisher}}
     \fi
     \ifx\publication@award\empty {}
-    \else {\par\textbf{\faAward\ \publication@award}}
+    \else {\par\textbf{\ding{72}\ \publication@award}}
     \fi
 }{
     \bigskip
