@@ -1,12 +1,12 @@
 ---
 title: "intro"
-date: "2026-04-19"
+date: "2026-07-15"
 slug: "intro"
 ---
 
 # Bridging people with AI agents.
 
-I'm **Sangwook Lee**, a second-year Ph.D. candidate at [Virginia Tech Computer Science](https://cs.vt.edu), advised by [Prof. Sang Won Lee](https://echolab.cs.vt.edu/sangwonlee/) in the [echolab](https://echolab.cs.vt.edu/). My research sits at the intersection of **Human-AI Interaction (HAI)**, **social computing**, and **accessibility**.
+I'm **Sangwook Lee**, a third-year Ph.D. candidate at [Virginia Tech Computer Science](https://cs.vt.edu), advised by [Prof. Sang Won Lee](https://echolab.cs.vt.edu/sangwonlee/) in the [echolab](https://echolab.cs.vt.edu/). My research sits at the intersection of **Human-AI Interaction (HAI)**, **social computing**, and **accessibility**.
 
 I design and study **AI-based agents that bridge gaps between people**. My Ph.D. research unfolds across two threads:
 
