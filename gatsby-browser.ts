@@ -1,3 +1,4 @@
+import './src/styles/global.css';
 import type { GatsbyBrowser } from 'gatsby';
 
 // GoatCounter counts the initial page load automatically via count.js.
