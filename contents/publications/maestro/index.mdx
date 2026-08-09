@@ -1,17 +1,15 @@
 ---
 title: "MAESTRO: Adapting GUIs and Guiding Navigation with User Preferences in Conversational Agents with GUIs"
-author: "Sangwook Lee, Sang Won Lee, Adnan Abbas, Young-Ho Kim, Yan Chen"
-publication_url: "https://arxiv.org/abs/2604.06134"
-publication_date: "2026-04-07"
+author: "Sangwook Lee, Adnan Abbas, Sang Won Lee, Young-Ho Kim, Yan Chen"
+publication_url: "https://doi.org/10.1145/3830398.3830672"
+publication_date: "2026-11-02"
 conference: "ACM UIST 2026"
 thumbnail: "./MAESTRO_thumbnail.png"
-paper_pdf: "./2604.06134v1.pdf"
-# github_url: ""
-demo_url: "https://tuning.cs.vt.edu/"
+paper_pdf: "./uist26a-sub7009-cam-i32.pdf"
+github_url: "https://github.com/wooogler/maestro-movie"
+demo_url: "https://maestro.cs.vt.edu/"
 format: "paper"
 highlighted: true
-under_review: true
-review_status: "Conditionally Accepted"
 slug: "maestro"
 ---
 
@@ -26,13 +24,13 @@ slug: "maestro"
 
 ## Abstract
 
-Modern task-oriented chatbots present GUI elements alongside natural-language dialogue, yet the agent's role has largely been limited to interpreting natural-language input as GUI actions and following a linear workflow. In preference-driven, multi-step tasks such as booking a flight or reserving a restaurant, earlier choices constrain later options and may force users to restart from scratch. User preferences serve as the key criteria for these decisions, yet existing agents do not systematically leverage them. We present MAESTRO, which extends the agent's role from execution to decision support. MAESTRO maintains a shared preference memory that extracts preferences from natural-language utterances with their strength, and provides two mechanisms. *Preference-Grounded GUI Adaptation* applies in-place operators (augment, sort, filter, and highlight) to the existing GUI according to preference strength, supporting within-stage comparison. *Preference-Guided Workflow Navigation* detects conflicts between preferences and available options, proposes backtracking, and records failed paths to avoid revisiting dead ends. We evaluated MAESTRO in a movie-booking Conversational Agent with GUI (CAG) through a 2 (Condition: Baseline vs. MAESTRO) × 2 (Mode: Text vs. Voice) within-subjects study (N=33).
+Modern task-oriented chatbots present GUI elements alongside natural-language dialogue, yet the agent's role has largely been limited to interpreting natural-language input as GUI actions and following a linear workflow. In preference-driven, multi-step tasks such as booking a flight or reserving a restaurant, earlier choices constrain later options and may force users to restart from scratch. User preferences serve as the key criteria for these decisions, yet existing agents do not systematically leverage them. We present MAESTRO, which extends the agent's role from execution to decision support. MAESTRO maintains a shared preference memory that extracts hard and soft preferences from natural-language utterances and provides two mechanisms. *Preference-Grounded GUI Adaptation* applies in-place operators (augment, sort, filter, and highlight) to the existing GUI according to preference strength, supporting comparison among options. *Preference-Guided Workflow Navigation* detects conflicts between preferences and available options, proposes backtracking, and records failed paths to avoid revisiting dead ends. Through a controlled experiment (N=33), we demonstrated that MAESTRO improved decision quality in movie ticketing: final bookings left fewer hard preferences unmet, and users made fewer selections that violated their stated preferences during the process than in the baseline condition, although task success rate and completion time did not differ significantly. In addition, we showed that using MAESTRO in voice mode can increase users' active engagement as well as their mental burden, revealing the nuanced tension in agentic interaction design for conversational agents with a GUI.
 
 ![MAESTRO overview at the theater selection stage: from the initial GUI through preference elicitation, the preference memory, to the adapted GUI](./maestro_teaser.png)
 
 ## Key Mechanisms
 
-MAESTRO extends a Conversational Agent with GUI (CAG) by introducing a *shared preference memory* and two grounded mechanisms:
+MAESTRO extends a Conversational Agent with GUI (CAG) by introducing a *shared preference memory* — which records preferences as *hard* (obligatory) or *soft* (hedged) — and two grounded mechanisms:
 
 1. **Preference-Grounded GUI Adaptation**: Four in-place operators (*augment*, *filter*, *sort*, and *highlight*) manipulate the information representation within the existing GUI without altering its structure, so users can compare and confirm options directly within the visual context.
 2. **Preference-Guided Workflow Navigation**: The agent detects conflicts between user preferences and available options, proposes a specific step to return to, and records failed paths to avoid revisiting dead ends.
@@ -47,7 +45,7 @@ MAESTRO's split-panel interface pairs adaptation actions with conversation: a wo
 
 ## User Study
 
-We evaluated MAESTRO through a 2×2 within-subjects study (N=33) using a movie-ticketing CAG, crossing Condition (Baseline vs. MAESTRO) with Mode (Text vs. Voice). Each participant completed a warm-up task and a main task that required revisiting earlier steps due to preference conflicts. We analyzed the resulting 128 trials with mixed-effects models, with results shown below.
+We evaluated MAESTRO through a 2×2 within-subjects study (N=33) using a movie-ticketing CAG, crossing Condition (Baseline vs. MAESTRO) with Mode (Text vs. Voice). Each participant completed four rounds — one per condition — each pairing a warm-up task with a main task that required revisiting earlier steps due to preference conflicts. We analyzed the resulting 132 main-task trials with mixed-effects models, with results shown below.
 
 ![Five interaction plots comparing Baseline and MAESTRO across Voice (blue, solid) and Text (orange, dotted) modes for Violation Count, Unpreferred Selection Count, Preference Statement Utterances, Action Request Utterances, and User Burden Scale](./maestro_results.png)
 
@@ -69,7 +67,7 @@ Together, these patterns suggest that MAESTRO and Voice encouraged more active, 
 
 ### RQ2: How Users Perceived MAESTRO
 
-**Participants clearly preferred MAESTRO over Baseline.** A post-study ranking across all four conditions yielded a significant Friedman test (χ²(3)=22.45, *p* &lt; .001). Pairwise Wilcoxon tests confirmed MAESTRO was preferred over Baseline in both Text (Δ=−1.03, *p* &lt; .001) and Voice (Δ=−0.48, *p*=.028). Mean ranks placed MAESTRO Text first (1.64), then MAESTRO Voice (2.61), Baseline Text (2.67), and Baseline Voice (3.09). When asked for a single top choice, 19 of 32 participants picked MAESTRO Text. In open-ended responses, participants praised the side-by-side layout, the system's ability to retain preferences across backtracking, and the perceived sense of control from direct GUI manipulation.
+**Participants clearly preferred MAESTRO over Baseline.** A post-study ranking across all four conditions yielded a significant Friedman test (χ²(3)=22.45, *p* &lt; .001). Pairwise Wilcoxon tests confirmed MAESTRO was preferred over Baseline in both Text (Δ=−1.03, *p* &lt; .001) and Voice (Δ=−0.48, *p*=.028). Mean ranks placed MAESTRO Text first (1.64), then MAESTRO Voice (2.61), Baseline Text (2.67), and Baseline Voice (3.09). When asked for a single top choice, 19 of 33 participants picked MAESTRO Text. In open-ended responses, participants praised the side-by-side layout, the system's ability to retain preferences across backtracking, and the perceived sense of control from direct GUI manipulation.
 
 **Verbosity in Voice mode amplified user burden.** The User Burden Scale (panel e) showed a significant Condition × Mode interaction (β=0.30, *p*=.030): burden rose with MAESTRO in Voice but fell with MAESTRO in Text. MAESTRO produced about 20 more agent utterances per task (β=0.51, *p* &lt; .001) due to its continuous feedback during GUI adaptation. Combined with the turn-taking constraints of TTS (no interruption, recognition errors, latency), this verbosity disproportionately taxed Voice users, as P4 noted: *"I felt that the narrator was reading too much of the script... I need to wait for the agent to complete its script before I could give my feedback."*
 
