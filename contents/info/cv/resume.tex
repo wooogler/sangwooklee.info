@@ -1,159 +1,125 @@
 \documentclass{resume}
-\usepackage[hidelinks]{hyperref}
-\usepackage{lipsum}
 
 \name{Sangwook Lee}
-\contact{\href{tel:+1-540-250-8969}{+1-540-250-8969}}
-\contact{\href{mailto:sangwooklee@vt.edu}{sangwooklee@vt.edu}}
-\contact{\href{https://www.sangwooklee.info}{www.sangwooklee.info}}
-\contact{\href{https://scholar.google.com/citations?user=3LmkqCEAAAAJ}{Google Scholar} $\cdot$ \href{https://github.com/wooogler}{github.com/wooogler}}
+\tagline{Ph.D. Candidate, Department of Computer Science, Virginia Tech (\href{https://echolab.cs.vt.edu/}{echolab})}
+\links{\clink{mailto:sangwooklee@vt.edu}{sangwooklee@vt.edu}\ \ $\cdot$\ \ \clink{https://www.sangwooklee.info}{sangwooklee.info}\ \ $\cdot$\ \ \clink{https://scholar.google.com/citations?user=3LmkqCEAAAAJ}{Google Scholar}\ \ $\cdot$\ \ \clink{https://github.com/wooogler}{github.com/wooogler}\ \ $\cdot$\ \ +1-540-250-8969}
+\lastupdated{Last updated September 2026.}
 
 \begin{document}
 \makeheader
 
-\begin{ResumeSection}{Research Interest}
-I design and study \textbf{AI-based agents that bridge gaps between people}, at the intersection of \textbf{Human-AI Interaction}, \textbf{Social Computing}, and \textbf{Accessibility}:
-\begin{itemize}
-    \item \textbf{Bridging the knowledge gap} -- a \textit{knowledge agent} that turns everyday lab communication into organizational memory, reducing information asymmetry among members (CHI~'26)
-    \item \textbf{Bridging the digital divide} -- a \textit{UI agent} that adapts GUIs and navigation to user preferences, reducing accessibility gaps in complex digital systems (UIST~'26)
+\cvsection{Research Interests}
+I design, build, and deploy LLM-based agents that \textbf{bridge gaps between people}, spanning human-AI interaction, social computing, and accessibility, while keeping end users in control of what agents do on their behalf:
+\begin{itemize}[nosep,leftmargin=1.3em,itemsep=1.5pt,topsep=3pt]\raggedright
+  \item \textbf{Knowledge gap} — turning everyday lab communication into organizational memory (CHOIR, CHI~'26)
+  \item \textbf{Digital divide} — adapting GUIs and navigation to each user's preferences (MAESTRO, UIST~'26)
+  \item \textbf{Human control} — letting instructors configure and audit classroom chatbots (SCORE)
 \end{itemize}
-\end{ResumeSection}
 
-\begin{ResumeSection}{education}
-    \begin{ResumeSubsection}{org={Virginia Tech},position={Ph.D. in Computer Science},duration={Aug. 2024 -- May 2029 (Expected)}, location={Blacksburg, VA}}
-        \begin{itemize}
-            \item Advisor: \href{https://sangwonlee.com/}{Sang Won Lee}
-        \end{itemize}
-    \end{ResumeSubsection}
-    \begin{ResumeSubsection}{org={Korea Advanced Institute of Science and Technology (KAIST)},position={M.S. in Computer Science},duration={Sep. 2021 -- Feb. 2024}, location={Daejeon, Korea}}
-        \begin{itemize}
-            \item Advisor: \href{http://cps.kaist.ac.kr/~ishin/}{Insik Shin}
-            \item Thesis: A Task-Oriented Multimodal Agent System to Enhance Mobile User Interface Accessibility for Older Adults
-        \end{itemize}
-    \end{ResumeSubsection}
-    \begin{ResumeSubsection}{org={Pohang University of Science and Technology (POSTECH)},position={B.S. in Convergence IT Engineering (Cum Laude)},duration={Mar. 2014 -- Aug. 2020}, location={Pohang, Korea}}
-    \end{ResumeSubsection}
-\end{ResumeSection}
+\cvsection{Education}
+\begin{entries}
+\entry{08/2024 -- Present}{\textbf{Virginia Tech}, Blacksburg, VA\\
+  Ph.D. Candidate in Computer Science \textbf{(expected graduation: 05/29)}\\
+  Advisor: \href{https://sangwonlee.com/}{Sang Won Lee}}
+\entry{09/2021 -- 02/2024}{\textbf{Korea Advanced Institute of Science and Technology (KAIST)}, Daejeon, Korea\\
+  M.S. in Computer Science. Advisor: \href{https://pure.kaist.ac.kr/en/persons/insik-shin/}{Insik Shin}\\
+  {\small Thesis: \textit{\href{https://www.sangwooklee.info/publications/tomas}{TOMAS: A Task-Oriented Multimodal Agent System to Enhance Mobile User Interface Accessibility for Older Adults}}}}
+\entry{03/2014 -- 08/2020}{\textbf{Pohang University of Science and Technology (POSTECH)}, Pohang, Korea\\
+  B.S. in Convergence IT Engineering, \textit{Cum Laude}}
+\end{entries}
 
-\begin{ResumeSection}{Honors \& Awards}
-    \begin{itemize}
-        \item \textbf{Honorable Mention Award} (Top 5\% of accepted papers), ACM CHI 2026
-        \item \textbf{Outstanding Reviewer Recognition} ($\times$3), ACM CHI 2026
-        \item \textbf{Honorable Mention}, ACM CHI 2016 Student Design Competition (Final Round)
-        \item \textbf{Cum Laude}, POSTECH, Aug. 2020
-    \end{itemize}
-\end{ResumeSection}
+\cvsection{Research Experience}
+\begin{entries}
+\entry{08/2024 -- Present}{\role{Graduate Research Assistant}{echolab, Virginia Tech}{Blacksburg, VA}\\
+  \mentor{Advisor: Sang Won Lee. Collaborators: \href{https://younghokim.net/}{Young-Ho Kim} (NAVER AI Lab), \href{https://chensivan.github.io/}{Yan Chen} (Toronto)}
+  \project{\href{https://choir.cs.vt.edu}{CHOIR}}{— chatbot-mediated organizational memory from lab communication [P4]}{LLM Slack chatbot for document-grounded Q\&A and AI-assisted document updates; one-month deployment in 4 research labs (N=21). CHI~'26 Best Paper Honorable Mention.}
+  \project{\href{https://maestro.cs.vt.edu/about}{MAESTRO}}{— conversational agent that adapts GUIs to user preferences [P5]}{Preference memory drives in-place GUI adaptation and workflow backtracking; a within-subjects study (N=33) showed fewer preference violations than a baseline agent; UIST~'26 paper and demo.}
+  \project{SCORE}{— instructor-side configuration of classroom LLM chatbots (in progress)}{Lets instructors author a chatbot's instructions as intents and trace every response back to the instruction that produced it, so they can see and fix how the chatbot behaves. Built on \href{https://swag.cs.vt.edu/about}{SWAG}, my writing platform where students draft alongside an instructor-configured chatbot with every keystroke, paste, and chat turn recorded; deployed in Spring 2025 courses at Virginia Tech and George Mason University (101 students). Pilot study with instructors in preparation.}
+  \project{\href{https://wordpress.cs.vt.edu/rylai/}{RYLAI}}{— chatbot role-play training against cybergrooming for adolescents (NSF SaTC \#2330940)}{Sole developer of the web platform (Next.js, SQLite, Docker) and of the self-hosted model server running the team's StagePilot policy (An et al., SIGDIAL~'26) with an Ollama-hosted Qwen2.5-7B generator; deployed under IRB.}}
+\entry{09/2021 -- 02/2024}{\role{Graduate Research Assistant}{Cyber-Physical Systems Lab, KAIST}{Daejeon, Korea}\\
+  \mentor{Advisor: Insik Shin}
+  \desc{Mobile UI automation and accessibility: multi-app UI mashup [P1]; M.S. thesis on TOMAS, a multimodal agent that simplifies smartphone UIs for older adults.}}
+\entry{06/2023 -- 08/2023}{\role{Visiting Student}{SaNDwich Lab, University of Notre Dame}{Notre Dame, IN}\\
+  \mentor{Mentor: \href{https://toby.li/}{Toby Jia-Jun Li}}
+  \desc{Led the design and implementation of TOMAS with the OpenAI API; mentored two undergraduate interns.}}
+\entry{09/2020 -- 09/2021}{\role{Research Intern}{KIXLAB, KAIST}{Daejeon, Korea}\\
+  \mentor{Mentors: \href{https://juhokim.com/}{Juho Kim}, \href{https://jyskwon.github.io/}{Jean Y. Song}}
+  \desc{Led ModSandbox, a sandbox that predicts errors of rule-based moderation before deployment; formative interviews and a between-subjects study with 20 Reddit moderators [P2].}}
+\entry{07/2017 -- 08/2017}{\role{Research Intern}{HCI+D Lab, Seoul National University}{Seoul, Korea}\\
+  \mentor{Mentor: \href{https://hcid.snu.ac.kr/people.html}{Joonhwan Lee}}
+  \desc{Participatory design workshop with female gamers on harassment in online games [W3].}}
+\end{entries}
 
-\begin{PublicationSection}{Refereed Journals and Conference Proceedings}
-    \begin{PublicationEntry}{title={\href{https://doi.org/10.1145/3830398.3830672}{MAESTRO: Adapting GUIs and Guiding Navigation with User Preferences in Conversational Agents with GUIs}}, author={\textbf{Sangwook Lee}, Adnan Abbas, Sang Won Lee, Young-Ho Kim, Yan Chen}, publisher={UIST '26: Proceedings of the 39th Annual ACM Symposium on User Interface Software and Technology}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://dl.acm.org/doi/10.1145/3772318.3791314}{CHOIR: A Chatbot-mediated Organizational Memory Leveraging Communication in University Research Labs}}, author={\textbf{Sangwook Lee}, Adnan Abbas, Yan Chen, Young-Ho Kim, Sang Won Lee}, publisher={CHI '26: Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems}, award={Honorable Mention (Top 5\% Accepted Paper)}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://doi.org/10.1016/j.ijhcs.2026.103863}{Toward Context-Aware and Personalized Sit-Stand Desk Interventions: Insights from a Field Observational Study}}, author={Donghan Hu, Junghoon Chung, Daniel Vargas Diaz, \textbf{Sangwook Lee}, Sang Won Lee, Sol Lim}, publisher={International Journal of Human-Computer Studies, Vol. 215 (2026)}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://dl.acm.org/doi/10.1145/3544548.3581057}{ModSandbox: Facilitating Online Community Moderation Through Error Prediction and Improvement of Automated Rules}}, author={\textbf{Sangwook Lee}*, Jean Y Song*, Jisoo Lee, Mina Kim, Juho Kim (*Equal Contribution)}, publisher={CHI '23: Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://dl.acm.org/doi/10.1145/3495243.3560522}{A-Mash: Providing Single-App Illusion for Multi-App Use Through User-centric UI Mashup}}, author={Sunjae Lee, Hoyoung Kim, Sijung Kim, \textbf{Sangwook Lee}, Hyosu Kim, Jean Young Song, Steven Y. Ko, Sangeun Oh, Insik Shin}, publisher={MobiCom '22: Proceedings of the 28th Annual International Conference on Mobile Computing And Networking}}
-    \end{PublicationEntry}
-\end{PublicationSection}
+\cvsection{Industry Experience}
+\begin{entries}
+\entry{02/2024 -- 08/2024}{\role{Software Engineer}{\href{https://fluiz.ai/}{Fluiz, Inc.}}{Seoul, Korea}\\
+  \mentor{KAIST faculty startup building mobile AI agents; Samsung Electronics C-Lab Outside (2026)}
+  \desc{Designed and prototyped LLM-based workflow automation for judicial scriveners with legal-software partner NSSAM: a Chrome extension records an expert's interactions and rationale, an LLM compiles them into reusable document-issuance workflows, and a remote Playwright server executes them.}}
+\end{entries}
 
-\begin{PublicationSection}{Lightly Reviewed Papers - Posters, Notes, and Workshop Papers}
-    \begin{PublicationEntry}{title={Redistributing Interdependence in Organizational Knowledge Work: Lessons from Deploying an LLM Mediator in Research Labs}, author={\textbf{Sangwook Lee}, Sang Won Lee}, publisher={Co-Data: Cultivating Effective Human-LLM Collaboration for Collaborative Data Processing Workshop at CHI '26}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={TUNING: Adaptive GUI Modification as Agent Tools in Task-Oriented Chatbots}, author={\textbf{Sangwook Lee}, Sang Won Lee}, publisher={Human-AI-UI Interactions Across Modalities Workshop at CHI '26}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://arxiv.org/abs/2205.14641}{LV-Linker: Supporting Fine-grained User Interaction Analyses by Linking Smartphone Log and Recorded Video Data}}, author={Hansoo Lee, \textbf{Sangwook Lee}, Youngji Koh, Uichin Lee}, publisher={UIST '22 Adjunct: Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07401440}{Implications for the Design of Sexual Harassment Prevention System for Online Games}}, author={Wookjae Maeng, Hyeok Kim, Junhee Woo, Youngjin Huh, Seo-young Lee, Jeewon Choi, \textbf{Sangwook Lee}, Jinsu Eun, Kung Jin Lee, Joonhwan Lee}, publisher={Proceedings of HCI Korea 2018}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://ieeexplore.ieee.org/abstract/document/7776394}{Mutiv: Music-based Mobile Application to Support Joggers}}, author={\textbf{Sangwook Lee}, Hyunggu Jung}, publisher={2016 IEEE International Conference on Healthcare Informatics (ICHI)}}
-    \end{PublicationEntry}
-    \begin{PublicationEntry}{title={\href{https://doi.org/10.1145/2851581.2890634}{LaneMate: Car Sensing System for the Deaf}}, author={\textbf{Sangwook Lee}, Yunho Kang, Yukyoung Lee}, publisher={CHI EA '16: Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in Computing Systems}, award={Honorable Mention (Student Design Competition Final Round)}}
-    \end{PublicationEntry}
-\end{PublicationSection}
+\cvsection{Publications}
+\cvsubsection{Peer-Reviewed Conference and Journal Papers}
+\begin{publist}
+\pub{[P5]}{\me, Adnan Abbas, Sang Won Lee, Young-Ho Kim, and Yan Chen}{2026}{\clink{https://www.sangwooklee.info/publications/maestro}{MAESTRO: Adapting GUIs and Guiding Navigation with User Preferences in Conversational Agents with GUIs}}{Proceedings of the ACM Symposium on User Interface Software and Technology (UIST~'26), to appear Nov.\ 2026}{}
+\pub{[P4]}{\me, Adnan Abbas, Yan Chen, Young-Ho Kim, and Sang Won Lee}{2026}{\clink{https://dl.acm.org/doi/10.1145/3772318.3791314}{CHOIR: A Chatbot-mediated Organizational Memory Leveraging Communication in University Research Labs}}{Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI~'26)}{Best Paper Honorable Mention (Top 5\%)}
+\pub{[P3]}{Donghan Hu, Junghoon Chung, Daniel Vargas Diaz, \me, Sang Won Lee, and Sol Lim}{2026}{\clink{https://doi.org/10.1016/j.ijhcs.2026.103863}{Toward Context-Aware and Personalized Sit-Stand Desk Interventions: Insights from a Field Observational Study}}{International Journal of Human-Computer Studies, 215}{}
+\pub{[P2]}{\me$^*$, Jean Y. Song$^*$, Jisoo Lee, Mina Kim, and Juho Kim ($^*$equal contribution)}{2023}{\clink{https://dl.acm.org/doi/10.1145/3544548.3581057}{ModSandbox: Facilitating Online Community Moderation Through Error Prediction and Improvement of Automated Rules}}{Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI~'23)}{}
+\pub{[P1]}{Sunjae Lee, Hoyoung Kim, Sijung Kim, \me, Hyosu Kim, Jean Y. Song, Steven Y. Ko, Sangeun Oh, and Insik Shin}{2022}{\clink{https://dl.acm.org/doi/10.1145/3495243.3560522}{A-Mash: Providing Single-App Illusion for Multi-App Use Through User-centric UI Mashup}}{Proceedings of the ACM International Conference on Mobile Computing and Networking (MobiCom~'22)}{}
+\end{publist}
 
-\begin{ResumeSection}{Research Experience}
-    \begin{ResumeSubsection}{org={echolab, Virginia Tech},location={Blacksburg, VA},position={Graduate Research Assistant (Advisor: \href{https://sangwonlee.com/}{Sang Won Lee})},duration={Aug. 2024 -- Present}}
-        \begin{itemize}
-            \item Built and deployed CHOIR, an LLM-based Slack chatbot that turns everyday lab communication into organizational memory via document-grounded (RAG) Q\&A, conversational knowledge extraction, and AI-assisted updates to GitHub-versioned documents (CHI '26, Honorable Mention)
-            \item Ran a month-long field deployment of CHOIR across 4 university research labs (N=21; 107 questions asked, 38 document updates applied) with a formative interview study (N=15), combining usage-log analysis with log-informed interviews
-            \item Designed MAESTRO, a conversational agent that adapts GUIs in place (augment, filter, sort, highlight) and guides workflow backtracking, grounded in an LLM-maintained preference memory and driven by LLM tool calling (UIST '26)
-            \item Evaluated MAESTRO in a 2$\times$2 within-subjects experiment (N=33; 132 trials) analyzed with mixed-effects models (GLMM/LMM), showing significantly fewer hard-preference violations and unpreferred selections than a baseline agent
-        \end{itemize}
-    \end{ResumeSubsection}
+\cvsubsection{Thesis}
+\begin{publist}
+\pub{[T1]}{\me}{2023}{\clink{https://www.sangwooklee.info/publications/tomas}{TOMAS: A Task-Oriented Multimodal Agent System to Enhance Mobile User Interface Accessibility for Older Adults}}{M.S. thesis, KAIST (Advisor: Insik Shin), with Qianhui Zhao, Haoming Ma, and Toby Jia-Jun Li}{}
+\end{publist}
 
-    \begin{ResumeSubsection}{org={SaNDwich Lab, University of Notre Dame},location={South Bend, IN},position={Visiting Student (Mentor: \href{https://toby.li/}{Toby Jia-Jun Li})},duration={Jun. 2023 -- Aug. 2023}}
-        \begin{itemize}
-            \item Coordinated a study on a task-oriented multimodal agent system to improve older adults' smartphone experience
-            \item Mentored two undergraduates to develop a conversational agent that interacts with mobile web applications powered by OpenAI API
-        \end{itemize}
-    \end{ResumeSubsection}
+\cvsubsection{Workshop Papers, Posters, and Extended Abstracts}
+\begin{publist}
+\pub{[W6]}{\me\ and Sang Won Lee}{2026}{\clink{https://www.sangwooklee.info/publications/codata-workshop}{Redistributing Interdependence in Organizational Knowledge Work: Lessons from Deploying an LLM Mediator in Research Labs}}{Co-Data: Cultivating Effective Human-LLM Collaboration for Collaborative Data Processing, Workshop at CHI~'26}{}
+\pub{[W5]}{\me\ and Sang Won Lee}{2026}{\clink{https://www.sangwooklee.info/publications/tuning-workshop}{TUNING: Adaptive GUI Modification as Agent Tools in Task-Oriented Chatbots}}{Human-AI-UI Interactions Across Modalities, Workshop at CHI~'26}{}
+\pub{[W4]}{Hansoo Lee, \me, Youngji Koh, and Uichin Lee}{2022}{\clink{https://arxiv.org/abs/2205.14641}{LV-Linker: Supporting Fine-grained User Interaction Analyses by Linking Smartphone Log and Recorded Video Data}}{Adjunct Proceedings of the ACM Symposium on User Interface Software and Technology (UIST~'22 Adjunct)}{}
+\pub{[W3]}{Wookjae Maeng, Hyeok Kim, Junhee Woo, Youngjin Huh, Seo-young Lee, Jeewon Choi, \me, Jinsu Eun, Kung Jin Lee, and Joonhwan Lee}{2018}{\clink{http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07401440}{Implications for the Design of Sexual Harassment Prevention System for Online Games}}{Proceedings of HCI Korea 2018}{}
+\pub{[W2]}{\me\ and Hyunggu Jung}{2016}{\clink{https://ieeexplore.ieee.org/abstract/document/7776394}{Mutiv: Music-based Mobile Application to Support Joggers}}{Poster, IEEE International Conference on Healthcare Informatics (ICHI~'16)}{}
+\pub{[W1]}{\me, Yunho Kang, and Yukyoung Lee}{2016}{\clink{https://doi.org/10.1145/2851581.2890634}{LaneMate: Car Sensing System for the Deaf}}{Extended Abstracts of the ACM Conference on Human Factors in Computing Systems (CHI EA~'16)}{Student Design Competition Honorable Mention (Final Round)}
+\end{publist}
 
-    \begin{ResumeSubsection}{org={KIXLAB, KAIST},location={Daejeon, Korea},position={Research Intern (Mentor: \href{https://juhokim.com/}{Juho Kim}, \href{https://jyskwon.github.io/}{Jean Y. Song})},duration={Sep. 2020 -- Sep. 2021}}
-        \begin{itemize}
-            \item Led research on ModSandbox, a virtual sandbox system that predicts false positives/negatives of rule-based moderation tools before deployment using sentence-embedding similarity (CHI '23)
-            \item Conducted formative surveys and in-depth interviews with Reddit moderators, followed by a between-subjects evaluation study with 20 active online moderators
-            \item Developed the system as a React/Django web application that tests AutoModerator rules against real community posts, visualizing violations and surfacing potentially erroneous cases
-        \end{itemize}
-    \end{ResumeSubsection}
+\needspace{8\baselineskip}
+\cvsection{Awards \& Honors}
+\begin{entries}
+\entry{2026}{\textbf{Best Paper Honorable Mention} (Top 5\%), ACM CHI 2026 [P4]}
+\entry{2026}{\textbf{Special Recognition for Outstanding Reviews} ($\times$3), ACM CHI 2026}
+\entry{2022}{\textbf{Gary Marsden Travel Award}, ACM SIGCHI}
+\entry{2016}{\textbf{Honorable Mention}, ACM CHI 2016 Student Design Competition (Final Round) [W1]}
+\end{entries}
 
-    \begin{ResumeSubsection}{org={HCI+D Lab, Seoul National University},location={Seoul, Korea},position={Research Intern (Mentor: \href{http://hcid.snu.ac.kr/people/}{Joonhwan Lee})},duration={Jul. 2017 -- Aug. 2017}}
-        \begin{itemize}
-            \item Conducted a participatory design workshop with female gamers to address sexual harassment in online games
-        \end{itemize}
-    \end{ResumeSubsection}
-\end{ResumeSection}
+\cvsection{Talks}
+\begin{entries}
+\entry{05/2026}{\textit{Bridging Gaps Between People with AI-Based Agents} (thesis seminar). \textbf{\href{https://hcid.snu.ac.kr/}{HCI+D Lab}, Seoul National University} (Joonhwan Lee); \textbf{\href{https://hai.seoultech.ac.kr/}{HAI Lab}, SeoulTech} (Kyoungwon Seo)}
+\entry{03/2026}{Opener talk, \textbf{\href{https://hci.icat.vt.edu/events/weekly-seminar-series.html}{CHCI@VT Weekly Seminar}}, Virginia Tech}
+\entry{07/2023}{\textit{Leveraging NLP Models in Practice}. \textbf{\href{https://www.dgp.toronto.edu/}{DGP Lab}, University of Toronto} (SuHyeon Yoo)}
+\end{entries}
 
-\begin{ResumeSection}{Work Experience}
-    \begin{ResumeSubsection}{org={Fluiz, Inc.},location={Seoul, Korea},position={Software Engineer},duration={Feb. 2024 -- Aug. 2024}}
-        \begin{itemize}
-            \item Led the development of an intelligent workflow automation system for commercial ERP solutions, leveraging LLMs to capture and operationalize domain expertise
-            \item Built a Chrome extension-based interaction recording tool enabling domain experts to easily translate business workflows into automation-ready data
-            \item Designed an execution server that stores recorded workflows in a graph database and automates web-based tasks through multi-turn conversations
-        \end{itemize}
-    \end{ResumeSubsection}
-\end{ResumeSection}
+\cvsection{Academic Service}
+\begin{entries}
+\entry{2023 -- 2026}{\textbf{Reviewer} — ACM CHI 2023--26 (3 Outstanding Reviews, 2026), UIST 2026, CSCW 2024}
+\entry{2020 -- 2026}{\textbf{Student Volunteer} — CHI 2021--26 (Photo SV 2024--26, Video Lead 2025), CSCW 2020}
+\end{entries}
 
-\begin{ResumeSection}{Skills}
-    \newcommand{\skill}[2]{\textbf{#1} -- #2}
-    \begin{ResumeSubsection}{org=Research Methods}
-        \begin{itemize}
-            \item \skill{Study Design}{Within-subjects controlled experiments (Latin-square counterbalancing), field deployment studies, formative \& semi-structured interviews, surveys}
-            \item \skill{Analysis}{Mixed-effects models (GLMM/LMM), non-parametric tests (Friedman, Wilcoxon), thematic analysis \& open coding, LLM-assisted content analysis}
-        \end{itemize}
-    \end{ResumeSubsection}
-    \begin{ResumeSubsection}{org=Engineering}
-        \begin{itemize}
-            \item \skill{LLM Systems}{OpenAI \& Anthropic APIs, agent tool calling, RAG with embedding retrieval, prompt engineering, voice interfaces (STT/TTS), LangChain}
-            \item \skill{Agentic Coding}{Claude Code, Cursor IDE}
-            \item \skill{Web \& Chatbot Development}{React, TypeScript, Express, Fastify, Django, Prisma, Slack Bolt \& GitHub APIs}
-            \item \skill{Programming Languages}{Python, TypeScript/JavaScript, R, C/C++}
-            \item \skill{Prototyping}{Figma, Claude Design}
-        \end{itemize}
-    \end{ResumeSubsection}
-    \begin{ResumeSubsection}{org=Language}
-        \begin{itemize}
-            \item \skill{Korean}{Native}
-            \item \skill{English}{Fluent}
-        \end{itemize}
-    \end{ResumeSubsection}
-\end{ResumeSection}
+\cvsection{Teaching}
+\begin{entries}
+\entry{Teaching Assistant}{CS 4104 Data and Algorithm Analytics, Virginia Tech (Fall 2025); CS 584 Human-Computer Interaction, KAIST (Fall 2023); CS 330 Operating Systems and Lab, KAIST (Fall 2021)}
+\end{entries}
 
-\begin{ResumeSection}{Academic Services}
-    \newcommand{\skillservice}[2]{\textbf{#1} -- #2}
-    \begin{itemize}
-        \item \skillservice{Reviewer}{ACM UIST 2026, ACM CHI 2026, CSCW 2024, CHI 2023 LBW}
-        \item \skillservice{Student Volunteer}{CHI 2026, 2025, 2024 (Photography SV); CHI 2023 (On-site); CHI 2022, 2021, CSCW 2020 (Remote)}
-    \end{itemize}
-\end{ResumeSection}
+\cvsection{Mentoring}
+\begin{entries}
+\entry{2026 -- Present}{Joshua Hairston, M.S. student, Virginia Tech (SCORE)}
+\entry{2023}{Chloe Qianhui Zhao, undergraduate intern, Univ.\ of Notre Dame (now Ph.D. student, UW)}
+\entry{2023}{Haoming Ma, undergraduate intern, University of Notre Dame (now ML Engineer, TikTok)}
+\end{entries}
 
-\begin{ResumeSection}{Teaching}
-    \begin{ResumeSubsection}{org={Data and Algorithm Analytics},location={Fall 2025},position={VT CS4104 Teaching Assistant (Instructor: Thang Hoang)}}
-    \end{ResumeSubsection}
-    \begin{ResumeSubsection}{org={Human-Computer Interaction},location={Fall 2023},position={KAIST CS584 Teaching Assistant (Instructor: Geehyuk Lee)}}
-    \end{ResumeSubsection}
-    \begin{ResumeSubsection}{org={Operating Systems and Lab},location={Fall 2021},position={KAIST CS330 Teaching Assistant (Instructor: Insik Shin)}}
-    \end{ResumeSubsection}
-\end{ResumeSection}
+\cvsection{Skills}
+\begin{entries}
+\entry{Methods}{Experiments, field deployments, interviews, surveys; GLMM/LMM, thematic analysis}
+\entry{Engineering}{Python, TypeScript, R; React/Next.js, Django; OpenAI/Anthropic APIs, RAG, Ollama; Docker}
+\end{entries}
 
 \end{document}
