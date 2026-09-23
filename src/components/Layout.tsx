@@ -32,9 +32,9 @@ const Layout = (props: Props) => {
 
   return (
     <div className='container mx-auto'>
-      <div className='flex flex-row flex-wrap py-4 w-5/6 mx-auto'>
-        <nav className='w-full md:w-1/4 px-2'>
-          <div className='sticky top-0 p-2 w-full'>
+      <div className='flex flex-row flex-wrap py-4 w-full px-4 md:w-5/6 md:px-0 mx-auto'>
+        <nav className='w-full md:w-1/4 px-0 md:px-2'>
+          <div className='sticky top-0 py-2 md:p-2 w-full'>
             <div className='flex flex-col overflow-hidden'>
               <StaticImage
                 src='../../contents/info/profile.jpg'
@@ -144,7 +144,7 @@ const Layout = (props: Props) => {
             </div>
           </div>
         </nav>
-        <main role='main' className='w-full md:w-3/4 pt-1 px-4'>
+        <main role='main' className='w-full md:w-3/4 pt-1 px-0 md:px-4'>
           {props.children}
         </main>
       </div>
