@@ -3,7 +3,7 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-type Props = {};
+type Props = { compact?: boolean };
 
 dayjs.extend(localizedFormat);
 
@@ -47,13 +47,37 @@ const NewsFeed = (props: Props) => {
     window.scrollTo({ top, behavior: "auto" });
   };
 
+  if (props.compact) {
+    return (
+      <div className='mt-3 space-y-2'>
+        {newsNodes?.map((node) => {
+          const slug = node.frontmatter.slug;
+
+          return (
+            <a
+              key={slug}
+              href={`/news/#${slug}`}
+              onClick={(event) => jumpToNews(event, slug)}
+              className='flex gap-4 text-sm hover:text-blue-600'
+            >
+              <span className='w-16 flex-shrink-0 text-slate-500'>
+                {dayjs(node.frontmatter.date).format("MMM YYYY")}
+              </span>
+              <span className='text-slate-800'>{node.frontmatter.title}</span>
+            </a>
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
     <div>
       {newsNodes?.map((node) => {
         const slug = node.frontmatter.slug;
 
         return (
-          <div className='mt-2'>
+          <div key={slug} className='mt-2'>
             <a href={`/news/#${slug}`} onClick={(event) => jumpToNews(event, slug)}>
               <div className='text-sm hover:text-blue-600'>
                 {node.frontmatter.title}
