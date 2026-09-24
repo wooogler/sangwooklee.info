@@ -12,4 +12,4 @@ I build and deploy **LLM-based agents that bridge gaps between people**, while k
 
 - **Knowledge gap**: turning everyday lab communication into organizational memory ([CHOIR](/publications/choir), CHI '26 Honorable Mention)
 - **Digital divide**: adapting GUIs and navigation to each user's preferences ([MAESTRO](/publications/maestro), UIST '26)
-- **Human control**: letting instructors configure and audit classroom chatbots (SCORE, in progress)
+- **Expertise gap**: letting domain experts, not engineers, shape AI behavior ([ModSandbox](/publications/modsandbox), CHI '23; SCORE, in progress)

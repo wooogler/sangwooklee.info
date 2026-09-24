@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import { useViewport } from "../util/hooks";
 import NewsFeed from "./NewsFeed";
+import Travel from "./Travel";
 import { AiOutlineFilePdf, AiOutlineMail } from "react-icons/ai";
 
 type Props = { children: ReactNode };
@@ -29,6 +30,13 @@ const Layout = (props: Props) => {
       }
     }
   `);
+
+  const tagline = (
+    <div className='text-sm my-2 leading-relaxed'>
+      Ph.D. Candidate @ echolab
+      <div className='font-semibold text-[#861F41]'>Virginia Tech</div>
+    </div>
+  );
 
   const pageLinks = (
     <>
@@ -127,9 +135,7 @@ const Layout = (props: Props) => {
                 <div className='text-2xl font-bold'>
                   <Link to='/'>Sangwook Lee</Link>
                 </div>
-                <div className='text-sm my-2'>
-                  Ph.D. Candidate @ echolab, Virginia Tech
-                </div>
+                {tagline}
                 <div className='flex mt-2 text-xl'>{socialButtons}</div>
                 <div className='mt-auto pt-2 space-y-1 text-[17px] leading-none [&_a]:py-1.5'>
                   <div className='flex flex-wrap'>{pageLinks}</div>
@@ -147,17 +153,9 @@ const Layout = (props: Props) => {
               </div>
             </div>
             <hr className='mt-5 mb-1' />
-            <div className='flex justify-between items-center'>
-              <div className='font-semibold'>News</div>
-              <Link
-                to='/news'
-                className='text-xs text-blue-500 hover:text-blue-700 underline'
-              >
-                More
-              </Link>
-            </div>
-            <NewsFeed compact />
-            <hr className='mt-3' />
+            <div className='font-semibold'>Travel</div>
+            <Travel compact />
+            <hr className='mt-4' />
           </div>
           <div className='hidden md:block sticky top-0 p-2 w-full'>
             <div className='flex flex-col overflow-hidden'>
@@ -171,9 +169,7 @@ const Layout = (props: Props) => {
                 <div className='text-lg font-bold'>
                   <Link to='/'>Sangwook Lee</Link>
                 </div>
-                <div className='text-sm my-2'>
-                  Ph.D. Candidate @ echolab, Virginia Tech
-                </div>
+                {tagline}
               </div>
               <div className='flex flex-col mt-2'>
                 {pageLinks}
@@ -182,6 +178,9 @@ const Layout = (props: Props) => {
               <div className='mt-4 flex'>{socialButtons}</div>
               <div className='mt-4'>
                 <hr className='mb-1' />
+                <div className='font-semibold'>Travel</div>
+                <Travel />
+                <hr className='mt-4 mb-1' />
                 <div className='flex justify-between items-center'>
                   <div className='font-semibold'>News</div>
                   <Link
